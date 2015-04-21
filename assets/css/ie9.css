@@ -1,0 +1,7 @@
+nav.menu {
+	display: none;
+}
+
+body.pmr-open nav.menu {
+	display: block;
+}

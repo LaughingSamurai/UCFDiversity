@@ -1,0 +1,244 @@
+/* Author:
+
+*/
+
+function jqUpdateSize(){   
+
+    var minWidth = 992; 
+    var currentWidth = $('body').width();
+    if ( currentWidth > minWidth ) {
+        $( '.sibling-nav ul' ).css ({'display':'block'});
+		$( '.dropdown-menu' ).attr('style' ,'');
+    }
+  
+}
+
+function checkContactModalSize() {
+
+    var currentWindowHeight = $( window ).height();
+
+    if ( currentWindowHeight < 600 ) {
+
+        $('#contact-modal-container').addClass( 'full-height-modal' );
+
+    } else {
+
+        $('#contact-modal-container').removeClass( 'full-height-modal' );
+
+    }
+
+}
+
+$(document).ready(function(){
+
+	jqUpdateSize();
+	checkContactModalSize();
+
+	$( window ).resize(function() {
+	  jqUpdateSize();
+	  checkContactModalSize();
+	});
+
+	// Fix Mobile Double Tap Issue
+	$('.sibling-nav a').on('click touchend', function(e) {
+      var el = $(this);
+      var link = el.attr('href');
+      window.location = link;
+   });
+
+	$( '.filter-dropdown-button' ).click(
+	    function() {
+	    	$( '.sibling-nav ul' ).slideToggle( 'slide' );
+	    }
+	);
+
+	var browserWidth = $('body').width();
+
+	if ( browserWidth > 768 ) {
+
+		$( '.course-container' ).bind( 'click', function(e) {
+
+			e.preventDefault();
+
+			var coursecontainerID = $(this).attr('id');
+
+			var coursecontainerheight = $("#courses-container").height();
+
+			var newheight = $('#modal-'+coursecontainerID).height();
+
+			   var biggestHeight = "0";
+
+			biggestHeight = newheight + 50;
+
+			var biggestcoursecontainerheight = coursecontainerheight + 50;
+
+			$('#modal-'+coursecontainerID).addClass( 'active-course' );
+
+			if ( biggestHeight > coursecontainerheight ) {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$("#courses-container").height(biggestHeight);
+
+				} else {
+
+					$("#courses-container").animate({
+					    height: biggestHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+
+			} else {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$("#courses-container").height(biggestcoursecontainerheight);
+
+				} else {
+
+					$("#courses-container").animate({
+					    height: biggestcoursecontainerheight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+				$('#modal-'+coursecontainerID).height(coursecontainerheight);
+			}
+
+		});
+
+		var courseContainerBaseHeight =  $("#courses-container").height();
+
+		$( '.close-course' ).bind( 'touchstart click', function(e) {
+
+			e.preventDefault();
+
+			$(".course-modal-container").removeClass( 'active-course' );
+
+		    $("#courses-container").css( 'height', 'auto' );
+
+		});
+
+	}
+
+	$( window ).resize(function() {
+
+			$("#courses-container").css( 'height', 'auto' );
+
+		    var courseContainerResizeHeight = $("#courses-container").height();
+
+		    var courseModalResizeHeight = $(".active-course .course-modal-container-inner").height();
+
+		    var courseModalResizePaddedHeight = $(".active-course .course-modal-container-inner").height() + 60;
+
+		    var courseModalResizeBigPaddedHeight = $(".active-course .course-modal-container-inner").height() + 60;
+
+		    if ( courseModalResizeHeight > courseContainerResizeHeight ) {
+
+		    	if ( $('html').hasClass('lt-ie9') ){
+
+					$(".active-course").height(courseModalResizePaddedHeight);
+
+					$("#courses-container").height(courseModalResizeBigPaddedHeight);
+
+				} else {
+
+					$(".active-course").animate({
+					    height: courseModalResizePaddedHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+					$("#courses-container").animate({
+					    height: courseModalResizeBigPaddedHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+
+			} else {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$(".active-course, #courses-container").height(courseContainerResizeHeight);
+
+				} else {
+
+					$(".active-course, #courses-container").animate({
+					    height: courseContainerResizeHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+					
+				}
+
+			}
+
+	});
+
+	$( '.push-menu-right-toggle' ).bind( 'touchstart click', function(e) {
+
+		e.preventDefault();
+
+	    $('body').toggleClass( 'pmr-open' );
+
+	    $('.mask').toggleClass( 'mask-visible' );
+
+	    $('.push-menu-right-toggle, html').toggleClass( 'push-menu-right-open' );
+
+	});
+
+	$( '.mask, .close-push-menu-right, .push-menu-right-toggle.push-menu-right-open' ).bind( 'touchstart click', function(e) {
+
+		e.preventDefault();
+
+		$('body').removeClass( 'pmr-open' );
+
+		$('.mask').removeClass( 'mask-visible' );
+
+		$('.push-menu-right-toggle, html').removeClass( 'push-menu-right-open' );
+
+	});
+
+	$('.popup').click(function(event) {
+	    event.preventDefault();
+	    window.open($(this).attr("href"), "popupWindow", "width=600,height=600,scrollbars=yes");
+	});
+
+	$('.course-container').click(function () {
+
+        $( '.course-modal-container' ).fadeOut();
+
+        var modalid = $(this).attr('id');
+
+        $('#modal-'+modalid+'').fadeIn();
+
+    });
+
+    $('.close-course').click(function (e) {
+        e.preventDefault();
+
+        var modalid = $(this).attr('id');
+
+        $(this).parent().fadeOut();
+
+    });
+
+    $('.contact').click(function () {
+
+        $( '#contact-modal-container' ).fadeIn();
+
+    });
+
+    $('.close-contact').click(function (e) {
+        e.preventDefault();
+
+        $( '#contact-modal-container' ).fadeOut();
+
+    });
+
+});
