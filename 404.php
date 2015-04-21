@@ -17,7 +17,7 @@
 		<h3>Please try the following:</h3>
 
 		<ul>
-			<li><?php _e('Check your spelling', 'roots'); ?></li>
+			<li>Check your spelling</li>
 			<li><?php printf(__('Return to the <a href="%s">home page</a>', 'roots'), home_url()); ?></li>
 			<li><?php _e('Click the <a href="javascript:history.back()">Back</a> button', 'roots'); ?></li>
 		</ul>
