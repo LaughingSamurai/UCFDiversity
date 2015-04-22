@@ -304,7 +304,7 @@ Template Name: Events
 	<script>
 
 		(function() {
-			var flickerAPI = "http://events.ucf.edu/calendar/1991/diversity-and-inclusion/upcoming/feed.json";
+			var flickerAPI = "https://events.ucf.edu/calendar/1991/diversity-and-inclusion/upcoming/feed.json";
 			$.getJSON( flickerAPI, {
 			    format: "json"
 			})

@@ -190,15 +190,36 @@ nav.menu {
       background-color: #435d88;
     }
 
+      #social-navigation li.menu-facebook a {
+        background: url('../img/facebook.png');
+        background-size: 9px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
     #social-navigation li.menu-twitter {
       background-color: #049eff;
       margin: 0 0 0 4px;
     }
 
+      #social-navigation li.menu-twitter a {
+        background: url('../img/twitter.png');
+        background-size: 18px 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
     #social-navigation li.menu-flickr {
       background-color: #f604ff;
       margin: 0 0 0 5px;
     }
+
+      #social-navigation li.menu-flickr a {
+        background: url('../img/flickr.png');
+        background-size: 18px 7px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
 
       #social-navigation li img {
         margin: 8px 0 0 0;
@@ -1289,6 +1310,18 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
     #social-navigation li.flickr img {
       margin: 18px 0 0 0;
+    }
+
+    #social-navigation li.menu-facebook a {
+      background-size: 9px 20px;
+    }
+
+    #social-navigation li.menu-twitter a {
+      background-size: 20px 17px;
+    }
+
+    #social-navigation li.menu-flickr a {
+      background-size: 20px 11px;
     }
 
   .home-section {
