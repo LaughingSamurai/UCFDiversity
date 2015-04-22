@@ -12,6 +12,15 @@ function roots_widgets_init() {
   ));
 
   register_sidebar(array(
+    'name'          => __('Header Brand Text', 'roots'),
+    'id'            => 'header-brand-text',
+    'before_widget' => '<div class="widget-inner">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
     'name'          => __('Footer Address', 'roots'),
     'id'            => 'footer-address',
     'before_widget' => '<div class="footer-address widget-inner">',

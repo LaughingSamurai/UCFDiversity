@@ -12,7 +12,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="<?php echo home_url(); ?>"><?php $title = get_bloginfo( 'title' ); echo $title; ?></a>
+            <a class="brand" href="<?php echo home_url(); ?>"><?php dynamic_sidebar('header-brand-text'); ?></a>
             <div class="mask"></div>
           </div>
 
