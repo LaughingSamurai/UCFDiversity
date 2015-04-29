@@ -116,7 +116,7 @@ nav.menu {
     display: inline-block;
     line-height: 0.850em;
     font-size: 2.375em;
-    max-width: 215px;
+    max-width: 250px;
     font-weight: 800;
     color: #000000;
     padding: 15px;
@@ -1080,7 +1080,8 @@ nav.menu {
 
     #contact-modal-container p a,
     #contact-modal-container p,
-    .course-modal-container p {
+    .course-modal-container p,
+    .course-modal-container li {
       color: #ffffff;
     }
 
