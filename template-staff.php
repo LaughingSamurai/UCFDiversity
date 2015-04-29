@@ -286,12 +286,19 @@ Template Name: Staff
 	<div id="staff-roll">
 
 		<?php
+		$s = 1;
 		$args = array( 'post_type' => 'staff', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => -1);
 		$lastposts = get_posts( $args );
 		foreach($lastposts as $post) : setup_postdata($post);
 		?>
 
+			<?php if ( $s === 1 ) {
+
+			} else { ?>
+
 			<hr>
+
+			<?php } ?>
 
 			<div class="staff">
 
@@ -317,6 +324,8 @@ Template Name: Staff
 			</div>
 
 		<?php 
+
+		$s++;
 
 		endforeach; 
 

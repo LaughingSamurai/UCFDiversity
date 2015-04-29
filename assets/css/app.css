@@ -416,10 +416,8 @@ nav.menu {
   padding: 0 0 8px 0;
 }
 
-.page-id-20 #page-tabs,
 .page-id-47 #page-tabs,
-.page-id-16 #page-tabs,
-.page-id-10 #page-tabs {
+.page-id-16 #page-tabs {
   display: none;
 }
 
