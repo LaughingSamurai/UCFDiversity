@@ -949,7 +949,7 @@ nav.menu {
   text-align: center;
   position: relative;
   cursor: pointer;
-  padding: 0 15px 15px 15px;
+  padding: 0 15px 30px 15px;
 }
 
   .respect-story-tile img {
@@ -965,7 +965,7 @@ nav.menu {
     color: #ffc904;
     right: 15px;
     left: 15px;
-    bottom: 15px;
+    bottom: 30px;
   }
 
 #contact-modal-container {
@@ -1540,7 +1540,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .respect-story-tile {
-    padding: 0 15px 15px 15px;
+    padding: 0 15px 30px 15px;
   }
 
   .respect-story {
