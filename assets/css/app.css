@@ -830,12 +830,14 @@ nav.menu {
       color: #ffffff;
     }
 
-#courses-container {
+#courses-container,
+#respect-stories {
   margin: 50px 0 0 0;
   position: relative;
 }
 
-.course-modal-container {
+.course-modal-container,
+.respect-story {
   display: none;
 }
 
@@ -871,8 +873,19 @@ nav.menu {
     padding: 0;
   }
 
-.course-modal-container {
+.course-modal-container,
+.respect-story {
   background-color: #707070;
+  position: absolute;
+  padding: 30px;
+  width: 100%;
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+
+.respect-story {
+  background-color: #000000;
   position: absolute;
   padding: 30px;
   width: 100%;
@@ -1008,6 +1021,21 @@ nav.menu {
     text-decoration: none;
     position: absolute;
     cursor: pointer;
+    color: #ffffff;
+    z-index: 6;
+    right: 8px;
+    top: 8px;
+  }
+
+  .close-respect-story {
+    font-family: "futura-pt-condensed",sans-serif;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    cursor: pointer;
     color: #ffc904;
     z-index: 6;
     right: 8px;
@@ -1021,9 +1049,16 @@ nav.menu {
       text-decoration: none;
       color: #ffc904;
     }
+
+    .close-respect-story:hover,
+    .close-respect-story:focus {
+      text-decoration: none;
+      color: #ffffff;
+    }
   
     .close-contact img,
-    #page-content a.close-course img {
+    #page-content a.close-course img,
+    .close-respect-story img {
       margin: 0 0 0 5px;
       width: 30px;
     }

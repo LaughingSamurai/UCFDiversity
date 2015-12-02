@@ -19,11 +19,11 @@ function checkContactModalSize() {
 
     if ( currentWindowHeight < 600 ) {
 
-        $('#contact-modal-container').addClass( 'full-height-modal' );
+        $('#contact-modal-container, .respect-story').addClass( 'full-height-modal' );
 
     } else {
 
-        $('#contact-modal-container').removeClass( 'full-height-modal' );
+        $('#contact-modal-container, .respect-story').removeClass( 'full-height-modal' );
 
     }
 
@@ -223,6 +223,23 @@ $(document).ready(function(){
         e.preventDefault();
 
         var modalid = $(this).attr('id');
+
+        $(this).parent().fadeOut();
+
+    });
+
+    $('.respect-story-tile').click(function () {
+
+        $( '.respect-story' ).fadeOut();
+
+        var modalid = $(this).attr('id');
+
+        $('#respect-story-'+modalid+'').fadeIn();
+
+    });
+
+    $('.close--respect-story').click(function (e) {
+        e.preventDefault();
 
         $(this).parent().fadeOut();
 
