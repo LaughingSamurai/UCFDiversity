@@ -905,21 +905,23 @@ nav.menu {
 
   .respect-story-content-inner p {
     padding: 0 0 10px 0;
+    color: #ffffff;
   }
 
 .respect-story-tile {
   background-color: #000000;
   text-align: center;
   cursor: pointer;
+  padding: 0;
 }
 
   .respect-story-tile img {
-    padding: 0;
     width: 100%;
   }
 
   .respect-story-tile h2 {
     font-size: 1.250em;
+    letter-spacing: 1px;
     color: #ffc904;
   }
 
