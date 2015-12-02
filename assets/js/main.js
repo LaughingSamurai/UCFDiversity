@@ -136,7 +136,7 @@ $(document).ready(function(){
 
 			biggestHeight = newheight + 50;
 
-			var biggestrespectstorycontainerheight = respectstorycontainerheight + 50;
+			var biggestrespectstorycontainerheight = respectstorycontainerheight;
 
 			$('#respect-story-'+respectstorycontainerID).addClass( 'active-story' );
 
@@ -178,7 +178,7 @@ $(document).ready(function(){
 
 		var respectstoryContainerBaseHeight =  $("#respect-stories").height();
 
-		$( '.close-course' ).bind( 'touchstart click', function(e) {
+		$( '.close-story' ).bind( 'touchstart click', function(e) {
 
 			e.preventDefault();
 
@@ -250,9 +250,9 @@ $(document).ready(function(){
 
 		    var respectStoriesModalResizeHeight = $(".active-story").height();
 
-		    var respectStoriesModalResizePaddedHeight = $(".active-story").height() + 60;
+		    var respectStoriesModalResizePaddedHeight = $(".active-story").height();
 
-		    var respectStoriesModalResizeBigPaddedHeight = $(".active-story").height() + 60;
+		    var respectStoriesModalResizeBigPaddedHeight = $(".active-story").height();
 
 		    if ( respectStoriesModalResizeHeight > respectStoriesContainerResizeHeight ) {
 

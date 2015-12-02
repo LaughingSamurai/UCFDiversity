@@ -303,7 +303,7 @@ Template Name: Respect UCF
 
 		?>		
 
-			<div id="<?php echo $storytilecounter; ?>" class="respect-story-tile respect-story-tile-<?php echo $storytilecounter; ?> col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<div id="<?php echo $storytilecounter; ?>" class="respect-story-tile respect-story-tile-<?php echo $storytilecounter; ?> col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				
 				<img src="<?php the_sub_field('respect_stories_image'); ?>" alt="<?php the_sub_field('respect_stories_title'); ?>" />
 
@@ -353,9 +353,7 @@ Template Name: Respect UCF
 
 						<hr>
 
-						<?php the_sub_field('respect_stories_story_left'); ?>
-
-						<?php the_sub_field('respect_stories_story_right'); ?>
+						<?php the_sub_field('respect_stories_story'); ?>
 
 					</div>
 
