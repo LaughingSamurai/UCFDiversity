@@ -140,7 +140,7 @@ $(document).ready(function(){
 
 			$('#respect-story-'+respectstorycontainerID).addClass( 'active-story' );
 
-			if ( biggestHeight > respectstorycontainerheight ) {
+			if ( biggestHeight > biggestrespectstorycontainerheight ) {
 
 				if ( $('html').hasClass('lt-ie9') ){
 
@@ -160,11 +160,11 @@ $(document).ready(function(){
 
 				if ( $('html').hasClass('lt-ie9') ){
 
-					$("#respect-stories").height(biggestrespectstorycontainerheight);
+					$('#respect-story-'+respectstorycontainerID).height(biggestrespectstorycontainerheight);
 
 				} else {
 
-					$("#respect-stories").animate({
+					$('#respect-story-'+respectstorycontainerID).animate({
 					    height: biggestrespectstorycontainerheight
 					}, 500, function() {
 					    // Animation complete.
