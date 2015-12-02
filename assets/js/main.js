@@ -178,7 +178,7 @@ $(document).ready(function(){
 
 		var respectstoryContainerBaseHeight =  $("#respect-stories").height();
 
-		$( '.close-story' ).bind( 'touchstart click', function(e) {
+		$( '.close-respect-story' ).bind( 'touchstart click', function(e) {
 
 			e.preventDefault();
 
