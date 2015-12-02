@@ -931,9 +931,25 @@ nav.menu {
     color: #ffffff;
   }
 
+  .respect-story-content-inner h3,
+  .respect-story-content-inner h4,
+  .respect-story-content-inner li {
+    color: #ffffff;
+  }
+
+  .respect-story-content-inner h3 {
+    font-size: 2.000em;
+  }
+
+  .respect-story-content-inner h4 {
+    font-size: 1.500em;
+  }
+
 .respect-story-tile {
   text-align: center;
+  position: relative;
   cursor: pointer;
+  padding: 0 15px 15px 15px;
 }
 
   .respect-story-tile img {
@@ -942,10 +958,14 @@ nav.menu {
 
   .respect-story-tile h2 {
     background-color: #000000;
+    position: absolute;
     font-size: 1.250em;
     letter-spacing: 1px;
     padding: 10px 0;
     color: #ffc904;
+    right: 15px;
+    left: 15px;
+    bottom: 0;
   }
 
 #contact-modal-container {

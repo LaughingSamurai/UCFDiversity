@@ -160,12 +160,12 @@ $(document).ready(function(){
 
 				if ( $('html').hasClass('lt-ie9') ){
 
-					$("#respect-stories").height(biggestrespectstorycontainerheight);
+					$("#respect-stories").height(respectstorycontainerheight);
 
 				} else {
 
 					$("#respect-stories").animate({
-					    height: biggestrespectstorycontainerheight
+					    height: respectstorycontainerheight
 					}, 500, function() {
 					    // Animation complete.
 					});

@@ -283,6 +283,8 @@ Template Name: Respect UCF
 
 	<div class="clear"></div>
 
+	<br/>
+
 	<h1 class="h2-emulator"><?php the_field('respect_stories_header'); ?></h1>
 
 	<hr>
