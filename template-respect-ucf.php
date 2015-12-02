@@ -345,9 +345,9 @@ Template Name: Respect UCF
 
 				<div class="respect-story-content">
 
-					<div class="respect-story-content-inner">
+					<img src="<?php the_sub_field('respect_stories_image'); ?>" alt="<?php the_sub_field('respect_stories_title'); ?>" class="col-lg-3 col-md-3 col-sm-3 col-xs-12" />
 
-						<img src="<?php the_sub_field('respect_stories_image'); ?>" alt="<?php the_sub_field('respect_stories_title'); ?>" />
+					<div class="respect-story-content-inner col-lg-9 col-md-9 col-sm-9 col-xs-12">
 
 						<h2><?php the_sub_field('respect_stories_title'); ?></h2>
 

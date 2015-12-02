@@ -836,6 +836,25 @@ nav.menu {
   position: relative;
 }
 
+#respect-stories h1 {
+  font-family: "futura-pt-condensed-n8", "futura-pt-condensed",sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 0.800em;
+  font-size: 4.500em;
+  font-style: normal;
+  font-weight: 800;
+  color: #545454;
+}
+
+#respect-stories hr {
+  border-top: 10px solid #ffc904;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 20px;
+  width: 18%;
+}
+
 .course-modal-container,
 .respect-story {
   display: none;
@@ -885,7 +904,7 @@ nav.menu {
 }
 
 .respect-story {
-  background-color: #000000;
+  background-color: #707070;
   position: absolute;
   padding: 30px;
   width: 100%;
@@ -900,7 +919,7 @@ nav.menu {
   }
 
   .respect-story-content-inner h2 {
-    color: #ffc904;
+    color: #ffffff;
   }
 
   .respect-story-content-inner p {

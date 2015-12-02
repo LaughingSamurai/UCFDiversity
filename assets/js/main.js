@@ -238,7 +238,7 @@ $(document).ready(function(){
 
     });
 
-    $('.close--respect-story').click(function (e) {
+    $('.close-respect-story').click(function (e) {
         e.preventDefault();
 
         $(this).parent().fadeOut();
