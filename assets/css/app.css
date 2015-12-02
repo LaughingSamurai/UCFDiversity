@@ -1057,6 +1057,7 @@ nav.menu {
 */
 
   .full-height-modal {
+    position: fixed !important;
     max-width: none !important;
     height: 100% !important;
     width: 100% !important;
@@ -1503,7 +1504,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     top: 0;
   }
 
-  .course-modal-container {
+  .course-modal-container,
+  .respect-story {
     background-color: #707070;
     overflow: scroll;
     position: fixed;

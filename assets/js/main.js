@@ -140,7 +140,7 @@ $(document).ready(function(){
 
 			$('#respect-story-'+respectstorycontainerID).addClass( 'active-story' );
 
-			if ( biggestHeight > biggestrespectstorycontainerheight ) {
+			if ( biggestHeight > respectstorycontainerheight ) {
 
 				if ( $('html').hasClass('lt-ie9') ){
 
@@ -160,18 +160,18 @@ $(document).ready(function(){
 
 				if ( $('html').hasClass('lt-ie9') ){
 
-					$('#respect-story-'+respectstorycontainerID).height(biggestrespectstorycontainerheight);
+					$("#respect-stories").height(biggestHeight);
 
 				} else {
 
-					$('#respect-story-'+respectstorycontainerID).animate({
-					    height: biggestrespectstorycontainerheight
+					$("#respect-stories").animate({
+					    height: biggestHeight
 					}, 500, function() {
 					    // Animation complete.
 					});
 
 				}
-				$('#respect-story-'+respectstorycontainerID).height(respectstorycontainerheight);
+				$('#respect-story-'+respectstorycontainerID).height(biggestHeight);
 			}
 
 		});
