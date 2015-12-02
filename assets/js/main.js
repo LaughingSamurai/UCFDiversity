@@ -160,18 +160,18 @@ $(document).ready(function(){
 
 				if ( $('html').hasClass('lt-ie9') ){
 
-					$("#respect-stories").height(biggestHeight);
+					$("#respect-stories").height(biggestrespectstorycontainerheight);
 
 				} else {
 
 					$("#respect-stories").animate({
-					    height: biggestHeight
+					    height: biggestrespectstorycontainerheight
 					}, 500, function() {
 					    // Animation complete.
 					});
 
 				}
-				// $('#respect-story-'+respectstorycontainerID).height(respectstorycontainerheight);
+				$('#respect-story-'+respectstorycontainerID).height(respectstorycontainerheight);
 			}
 
 		});

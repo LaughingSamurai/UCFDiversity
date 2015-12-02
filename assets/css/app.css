@@ -834,6 +834,7 @@ nav.menu {
 #respect-stories {
   margin: 50px 0 0 0;
   position: relative;
+  overflow: hidden;
 }
 
 #respect-stories h1 {
@@ -1516,6 +1517,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     right: 0;
     left: 0;
     top: 0;
+  }
+
+  .respect-story-tile {
+    padding: 0 15px 15px 15px;
   }
 
   .respect-story {
