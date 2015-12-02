@@ -351,6 +351,8 @@ Template Name: Respect UCF
 
 						<h2><?php the_sub_field('respect_stories_title'); ?></h2>
 
+						<hr>
+
 						<?php the_sub_field('respect_stories_story_left'); ?>
 
 						<?php the_sub_field('respect_stories_story_right'); ?>

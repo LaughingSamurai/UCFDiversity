@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 			var newheight = $('#modal-'+coursecontainerID).height();
 
-			   var biggestHeight = "0";
+			var biggestHeight = "0";
 
 			biggestHeight = newheight + 50;
 
@@ -122,6 +122,72 @@ $(document).ready(function(){
 
 		});
 
+		$( '.respect-story-tile' ).bind( 'click', function(e) {
+
+			e.preventDefault();
+
+			var respectstorycontainerID = $(this).attr('id');
+
+			var respectstorycontainerheight = $("#respect-stories").height();
+
+			var newheight = $('#respect-story-'+respectstorycontainerID).height();
+
+			var biggestHeight = "0";
+
+			biggestHeight = newheight + 50;
+
+			var biggestrespectstorycontainerheight = respectstorycontainerheight + 50;
+
+			$('#respect-story-'+respectstorycontainerID).addClass( 'active-story' );
+
+			if ( biggestHeight > respectstorycontainerheight ) {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$("#respect-stories").height(biggestHeight);
+
+				} else {
+
+					$("#respect-stories").animate({
+					    height: biggestHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+
+			} else {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$("#respect-stories").height(biggestrespectstorycontainerheight);
+
+				} else {
+
+					$("#respect-stories").animate({
+					    height: biggestrespectstorycontainerheight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+				$('#respect-story-'+respectstorycontainerID).height(respectstorycontainerheight);
+			}
+
+		});
+
+		var respectstoryContainerBaseHeight =  $("#respect-stories").height();
+
+		$( '.close-course' ).bind( 'touchstart click', function(e) {
+
+			e.preventDefault();
+
+			$(".respect-story").removeClass( 'active-story' );
+
+		    $("#respect-stories").css( 'height', 'auto' );
+
+		});
+
 	}
 
 	$( window ).resize(function() {
@@ -170,6 +236,58 @@ $(document).ready(function(){
 
 					$(".active-course, #courses-container").animate({
 					    height: courseContainerResizeHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+					
+				}
+
+			}
+
+			$("#respect-stories").css( 'height', 'auto' );
+
+		    var respectStoriesContainerResizeHeight = $("#respect-stories").height();
+
+		    var respectStoriesModalResizeHeight = $(".active-story").height();
+
+		    var respectStoriesModalResizePaddedHeight = $(".active-story").height() + 60;
+
+		    var respectStoriesModalResizeBigPaddedHeight = $(".active-story").height() + 60;
+
+		    if ( respectStoriesModalResizeHeight > respectStoriesContainerResizeHeight ) {
+
+		    	if ( $('html').hasClass('lt-ie9') ){
+
+					$(".active-story").height(respectStoriesModalResizePaddedHeight);
+
+					$("#respect-stories").height(respectStoriesModalResizeBigPaddedHeight);
+
+				} else {
+
+					$(".active-story").animate({
+					    height: respectStoriesModalResizePaddedHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+					$("#respect-stories").animate({
+					    height: respectStoriesModalResizeBigPaddedHeight
+					}, 500, function() {
+					    // Animation complete.
+					});
+
+				}
+
+			} else {
+
+				if ( $('html').hasClass('lt-ie9') ){
+
+					$(".active-story, #respect-stories").height(respectStoriesContainerResizeHeight);
+
+				} else {
+
+					$(".active-story, #respect-stories").animate({
+					    height: respectStoriesContainerResizeHeight
 					}, 500, function() {
 					    // Animation complete.
 					});
