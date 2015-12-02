@@ -894,6 +894,19 @@ nav.menu {
   top: 0;
 }
 
+.respect-story-tile {
+  background-color: #000000;
+}
+
+  .respect-story-tile img {
+    width: 100%;
+  }
+
+  .respect-story-tile h2 {
+    font-size: 1.250em;
+    color: #ffc904;
+  }
+
 #contact-modal-container {
   background-color: #707070;
   position: fixed;

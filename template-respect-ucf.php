@@ -339,7 +339,7 @@ Template Name: Respect UCF
 
 		?>		
 
-			<div id="respect-story-<?php echo $storytilecounter; ?>" class="respect-story">
+			<div id="respect-story-<?php echo $storycounter; ?>" class="respect-story">
 
 				<a href="#" class="close-respect-story">Close <img src="<?php echo get_template_directory_uri(); ?>/assets/img/white-close.png" alt="Close" title="Close"></a>
 
