@@ -894,11 +894,27 @@ nav.menu {
   top: 0;
 }
 
+  .respect-story-content-inner img {
+    padding: 0 20px 20px 0;
+    float: left;
+  }
+
+  .respect-story-content-inner h2 {
+    color: #ffc904;
+  }
+
+  .respect-story-content-inner p {
+    padding: 0 0 10px 0;
+  }
+
 .respect-story-tile {
   background-color: #000000;
+  text-align: center;
+  cursor: pointer;
 }
 
   .respect-story-tile img {
+    padding: 0;
     width: 100%;
   }
 
@@ -1040,7 +1056,7 @@ nav.menu {
     top: 8px;
   }
 
-  .close-respect-story {
+  #page-content a.close-respect-story {
     font-family: "futura-pt-condensed",sans-serif;
     position: relative;
     font-style: normal;

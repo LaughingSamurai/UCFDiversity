@@ -341,7 +341,7 @@ Template Name: Respect UCF
 
 			<div id="respect-story-<?php echo $storycounter; ?>" class="respect-story">
 
-				<a href="#" class="close-respect-story">Close <img src="<?php echo get_template_directory_uri(); ?>/assets/img/white-close.png" alt="Close" title="Close"></a>
+				<a href="#" class="close-respect-story">Close <img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-close.png" alt="Close" title="Close"></a>
 
 				<div class="respect-story-content">
 					
@@ -350,8 +350,6 @@ Template Name: Respect UCF
 					<div class="respect-story-content-inner">
 
 						<h2><?php the_sub_field('respect_stories_title'); ?></h2>
-
-						<?php the_sub_field('respect_stories_image'); ?>
 
 						<?php the_sub_field('respect_stories_story_left'); ?>
 
