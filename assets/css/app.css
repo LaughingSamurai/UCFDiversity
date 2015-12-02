@@ -1504,13 +1504,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     top: 0;
   }
 
-  .course-modal-container,
-  .respect-story {
+  .course-modal-container {
     background-color: #707070;
     overflow: scroll;
     position: fixed;
     margin: 0 auto;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     z-index: 100001;
     height: 100% !important;
     width: 100%;
@@ -1518,6 +1517,30 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     left: 0;
     top: 0;
   }
+
+  .respect-story {
+    background-color: #000000;
+    overflow: scroll;
+    position: fixed;
+    margin: 0 auto;
+    padding: 60px 30px 30px 30px;
+    z-index: 100001;
+    height: 100% !important;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+    .respect-story-content img {
+      margin: 0 auto;
+      width: 75%;
+    }
+
+    .respect-story-content .col-lg-3,
+    .respect-story-content .col-lg-9 {
+      padding: 0;
+    }
 
   .close-contact,
   #page-content a.close-course {

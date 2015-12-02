@@ -171,7 +171,7 @@ $(document).ready(function(){
 					});
 
 				}
-				$('#respect-story-'+respectstorycontainerID).height(biggestHeight);
+				// $('#respect-story-'+respectstorycontainerID).height(respectstorycontainerheight);
 			}
 
 		});
