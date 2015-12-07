@@ -81,11 +81,37 @@ Template Name: Home
 
 		<hr>
 
+		<?php
+
+		// check if the repeater field has rows of data
+		if( have_rows('home_programs_featured_programs') ):
+
+			$procounter = 0;
+
+			// loop through the rows of data
+			while ( have_rows('home_programs_featured_programs') ) : the_row();
+
+				$procounter++;
+
+			endwhile;
+
+		else :
+
+			// no rows found
+
+		endif;
+
+		?>
+
+		<?php if( $procounter = 1 || $procounter = 2 ): ?>
+
 		<div class="col-lg-4 col-md-4 col-sm-4">
 			
 			<p class="intro-content"><?php the_field('home_programs_intro_content'); ?></p>
 
 		</div>
+
+		<?php endif; ?>
 
 		<?php
 

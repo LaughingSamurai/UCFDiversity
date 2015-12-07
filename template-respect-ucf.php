@@ -289,6 +289,10 @@ Template Name: Respect UCF
 
 	<hr>
 
+	<div class="respect-stories-description">
+		<p><?php the_field('respect_stories_intro'); ?></p>
+	</div>
+
 	<div id="respect-stories">
 
 		<?php wp_reset_query(); ?>
