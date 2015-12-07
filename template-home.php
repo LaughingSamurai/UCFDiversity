@@ -103,7 +103,7 @@ Template Name: Home
 
 		?>
 
-		<?php if( $procounter = 1 || $procounter = 2 ): ?>
+		<?php if( $procounter == 1 || $procounter == 2 ): ?>
 
 		<div class="col-lg-4 col-md-4 col-sm-4">
 			
