@@ -385,6 +385,138 @@ Template Name: Respect UCF
 
 	</div>
 
+	<?php
+
+	// check if the repeater field has rows of data
+	if( have_rows('column_rows_after_stories') ):
+
+		// loop through the rows of data
+		while ( have_rows('column_rows_after_stories') ) : the_row();
+
+	?>		
+
+		<div class="column-rows">
+
+			<?php if ( get_sub_field('column_full_row_after_stories') != NULL ) { ?>
+
+				<p><?php the_sub_field('column_full_row_after_stories'); ?></p>
+
+			<?php } ?>
+						
+			<div class="<?php if ( get_sub_field('column_row_text_left_after_stories') != NULL || have_rows('inset_button_left_after_stories') ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">
+
+				<div class="columned-text">
+					
+					<p><?php the_sub_field('column_row_text_left_after_stories'); ?></p>
+
+				</div>
+
+				<?php
+
+				// check if the repeater field has rows of data
+				if( have_rows('inset_button_left_after_stories') ):
+
+					// loop through the rows of data
+					while ( have_rows('inset_button_left_after_stories') ) : the_row();
+
+				?>		
+
+					<div class="<?php the_sub_field('inset_button_left_background_color_after_stories'); ?> inset-box">
+
+						<h2><?php the_sub_field('inset_button_left_title_after_stories'); ?></h2>
+
+						<p><?php the_sub_field('inset_button_left_content_after_stories'); ?></p>
+
+						<?php if ( get_sub_field('inset_button_left_link_after_stories') != NULL ) { ?>
+
+							<a href="<?php the_sub_field('inset_button_left_link_after_stories'); ?>"><?php the_sub_field('inset_button_left_link_text_after_stories'); ?> <?php if ( get_sub_field('inset_button_left_background_color_after_stories') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_left_link_text_after_stories'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_left_link_text_after_stories'); ?>"><?php } ?></a>
+
+						<?php } ?>
+
+					</div>
+
+				<?php	
+
+					endwhile;
+
+				else :
+
+					// no rows found
+
+				endif;
+
+				?>
+
+			</div>
+
+			<div class="<?php if ( get_sub_field('column_row_text_right_after_stories') || have_rows('inset_button_right_after_stories') != NULL ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">
+
+				<div class="columned-text">
+					
+					<p><?php the_sub_field('column_row_text_right_after_stories'); ?></p>
+
+				</div>
+
+				<?php
+
+				// check if the repeater field has rows of data
+				if( have_rows('inset_button_right_after_stories') ):
+
+					// loop through the rows of data
+					while ( have_rows('inset_button_right_after_stories') ) : the_row();
+
+				?>		
+
+					<div class="<?php the_sub_field('inset_button_right_background_color_after_stories'); ?> inset-box">
+
+						<h2><?php the_sub_field('inset_button_right_title_after_stories'); ?></h2>
+
+						<p><?php the_sub_field('inset_button_right_content_after_stories'); ?></p>
+
+						<?php if ( get_sub_field('inset_button_right_link_after_stories') != NULL ) { ?>
+
+							<a href="<?php the_sub_field('inset_button_right_link_after_stories'); ?>"><?php the_sub_field('inset_button_right_link_text_after_stories_after_stories'); ?> <?php if ( get_sub_field('inset_button_right_background_color_after_stories_after_stories') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php } ?></a>
+
+						<?php } ?>
+	
+					</div>
+
+				<?php	
+
+					endwhile;
+
+				else :
+
+					// no rows found
+
+				endif;
+
+				?>
+
+			</div>
+
+			<div class="clear"></div>
+
+			<?php if ( get_sub_field('bottom_divider_after_stories') == "yes" ) { ?>
+
+				<hr>
+
+			<?php } ?>
+
+		</div>
+
+	<?php	
+
+		endwhile;
+
+	else :
+
+		// no rows found
+
+	endif;
+
+	?>
+
 </div>
 
 </div>
