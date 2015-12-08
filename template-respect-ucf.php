@@ -397,6 +397,8 @@ Template Name: Respect UCF
 
 		<div class="column-rows">
 
+			<hr>
+
 			<?php if ( get_sub_field('column_full_row_after_stories') != NULL ) { ?>
 
 				<p><?php the_sub_field('column_full_row_after_stories'); ?></p>
@@ -475,7 +477,7 @@ Template Name: Respect UCF
 
 						<?php if ( get_sub_field('inset_button_right_link_after_stories') != NULL ) { ?>
 
-							<a href="<?php the_sub_field('inset_button_right_link_after_stories'); ?>"><?php the_sub_field('inset_button_right_link_text_after_stories_after_stories'); ?> <?php if ( get_sub_field('inset_button_right_background_color_after_stories_after_stories') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php } ?></a>
+							<a href="<?php the_sub_field('inset_button_right_link_after_stories'); ?>"><?php the_sub_field('inset_button_right_link_text_after_stories'); ?> <?php if ( get_sub_field('inset_button_right_background_color_after_stories_after_stories') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text_after_stories'); ?>"><?php } ?></a>
 
 						<?php } ?>
 	
