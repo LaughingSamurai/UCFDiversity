@@ -607,7 +607,7 @@ nav.menu {
 
   #page-content a {
     text-decoration: underline;
-    color: #000000;
+    color: #01c0ff !important;
   }
 
   #page-content iframe {
@@ -659,9 +659,9 @@ nav.menu {
 
     .column-rows hr {
         border-top: 1px solid #ffc904;
-  margin-bottom: 20px;
-  text-align: left;
-  margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: left;
+      margin-top: 60px;
       width: 100%;
     }
 
