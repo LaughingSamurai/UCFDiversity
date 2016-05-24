@@ -316,7 +316,7 @@ Template Name: Events
 			        		'<h2>'+val.title+'</h2>' +
 			        		'<h3><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></h3>' +
 			        		'<p>'+val.description+'</p>' +
-			        		'<a href="'+val.url+'" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details" class="see-event-details"></a>' +
+			        		'<a href="'+val.url+'" class="see-event-details" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
 			        	'</div>';
 			        $( "#event-roll" ).append(single_event);
 			        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
