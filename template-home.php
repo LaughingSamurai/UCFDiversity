@@ -50,9 +50,9 @@ Template Name: Home
 			<?php wp_reset_query(); ?>
 		
 			<?php
-			$argsfeatures = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
-			$lastpostsfeatures = get_posts( $argsfeatures );
-			foreach($lastpostsfeatures as $postfeatures) : setup_postdata($postfeatures);
+			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
+			$lastposts = get_posts( $args );
+			foreach($lastposts as $post) : setup_postdata($post);
 
 			?>
 
