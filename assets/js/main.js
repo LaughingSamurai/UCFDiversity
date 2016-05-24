@@ -432,6 +432,8 @@ $(document).ready(function(){
 
 		        e.preventDefault();
 
+		        e.stopPropagation();
+
 		        var currentText = $(this).text();
 
 		        if ( currentText == '-' ) {
@@ -501,6 +503,8 @@ $(document).ready(function(){
     		$('#menu-primary-navigation-1 li.dropdown a.dropdown-toggle span.child-expand-button').bind( 'touchstart click', function(e) {
 
 		        e.preventDefault();
+
+		        e.stopPropagation();
 
 		        var currentText = $(this).text();
 
