@@ -607,7 +607,7 @@ nav.menu {
 
   #page-content a {
     text-decoration: underline;
-    color: #01c0ff !important;
+    color: #01c0ff;
   }
 
   #page-content iframe {
