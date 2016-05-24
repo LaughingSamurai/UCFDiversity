@@ -376,7 +376,7 @@ $(document).ready(function(){
 
     });
 
-    $( "#menu-primary-navigation-1 a.dropdown-toggle" ).bind( "touchstart", function() {
+    $( "#menu-primary-navigation-1 a.dropdown-toggle" ).bind( "touchstart click", function() {
 	  var hrefvalue = $( this ).attr( "href" );
 
 	  window.location.href = hrefvalue;
