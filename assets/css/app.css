@@ -162,6 +162,35 @@ nav.menu {
         float: right;
       }
 
+    .dropdown-menu {
+      background-color: #545454;
+      border-radius: 0px;
+      border: none;
+      padding: 0px;
+      margin: 0px;
+    }
+
+      .dropdown-menu li {
+        display: block !important;
+      }
+
+        .dropdown-menu li a {
+          background-color: #545454 !important;
+          text-transform: none !important;
+          color: #ffffff !important;
+          padding: 10px;
+        }
+
+          .dropdown-menu li a:hover,
+          .dropdown-menu li a:focus {
+            background-color: #ffc904 !important;
+            color: #000000 !important;
+          }
+
+        .caret {
+          display: none;
+        }
+
   #social-navigation {
     float: right;
   }

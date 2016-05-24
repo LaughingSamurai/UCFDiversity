@@ -376,4 +376,24 @@ $(document).ready(function(){
 
     });
 
+    var navTimers = [];
+	$( ".dropdown" ).hover(
+		function () {
+			var id = jQuery.data( this );
+			var $this = $( this );
+			navTimers[id] = setTimeout( function() {
+				$this.children( '.dropdown-menu' ).slideToggle();
+				navTimers[id] = "";
+			}, 300 );
+		},
+		function () {
+			var id = jQuery.data( this );
+			if ( navTimers[id] != "" ) {
+				clearTimeout( navTimers[id] );
+			} else {
+				$( this ).children( ".dropdown-menu" ).toggle();
+			}
+		}
+	);	
+
 });
