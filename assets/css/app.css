@@ -152,6 +152,11 @@ nav.menu {
         color: #ffffff;
       }
 
+      #menu-primary-navigation li:focus a,
+      #menu-primary-navigation li:hover a {
+        color: #ffffff;
+      }
+
       .contact {
         text-transform: uppercase;
         background-color: #ffc904;
@@ -179,7 +184,7 @@ nav.menu {
         .dropdown-menu li a {
           background-color: #545454 !important;
           text-transform: none !important;
-          text-transform: uppercase;
+          text-transform: uppercase !important;
           color: #ffffff !important;
           padding: 15px;
         }
@@ -190,7 +195,9 @@ nav.menu {
             color: #ffc904 !important;
           }
 
-        .caret {
+        .caret,
+        .nav>li>a span.child-expand-button,
+        .nav>li.dropdown .dropdown-menu li a span.child-expand-button {
           display: none;
         }
 
@@ -1736,7 +1743,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
         position: absolute;
         z-index: 20;
         background-color: #ffc904;
-        overflow: hidden;
+        overflow: scroll;
         display: block;
         /*display: block;*/
         -webkit-transition: all 0.3s;
@@ -1748,6 +1755,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       }
       nav.menu ul {
         list-style-type: none;
+        overflow: scroll;
+        height: 100%;
         margin: 0;
         padding: 0;
       }
@@ -1820,6 +1829,20 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     z-index: 20;
     right: 200px;
     float: none;
+  }
+
+  .nav>li.dropdown a.dropdown-toggle span.child-expand-button {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    font-size: 1.125em;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    padding: 14px;
+    z-index: 25;
   }
 
   html {

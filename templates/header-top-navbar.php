@@ -24,7 +24,7 @@
 
           <p class="contact">Contact</p>
 
-          <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav' )); ?> 
+          <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav', 'link_after' => '<span class="child-expand-button">+</span>' )); ?> 
 
         </div>
             

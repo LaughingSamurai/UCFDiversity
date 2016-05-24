@@ -376,24 +376,164 @@ $(document).ready(function(){
 
     });
 
-    var navTimers = [];
-	$( ".dropdown" ).hover(
-		function () {
-			var id = jQuery.data( this );
-			var $this = $( this );
-			navTimers[id] = setTimeout( function() {
-				$this.children( '.dropdown-menu' ).slideToggle();
-				navTimers[id] = "";
-			}, 300 );
-		},
-		function () {
-			var id = jQuery.data( this );
-			if ( navTimers[id] != "" ) {
-				clearTimeout( navTimers[id] );
-			} else {
-				$( this ).children( ".dropdown-menu" ).toggle();
-			}
+    var windowcheck = $('body').width();
+
+	$( window ).resize(function() {
+
+		var windowcheck = $('body').width();
+
+		if ( windowcheck > 768 ) {
+
+			$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
+
+		    var navTimers = [];
+			$( ".dropdown" ).hover(
+				function () {
+					var id = jQuery.data( this );
+					var $this = $( this );
+					navTimers[id] = setTimeout( function() {
+						$this.children( '.dropdown-menu' ).slideToggle();
+						navTimers[id] = "";
+					}, 300 );
+				},
+				function () {
+					var id = jQuery.data( this );
+					if ( navTimers[id] != "" ) {
+						clearTimeout( navTimers[id] );
+					} else {
+						$( this ).children( ".dropdown-menu" ).toggle();
+					}
+				}
+			);	
+
+			$('.dropdown-toggle span.child-expand-button').text('+');
+
+            $('.dropdown-toggle').removeClass('child-nav-open');
+
+            $('.dropdown-toggle span.child-expand-button').removeClass('child-nav-open');
+
+            $('.dropdown-menu').removeClass('display-child-nav');
+
+		} else {
+
+			$('.dropdown').off( "mouseenter mouseleave" );
+
+			// $('.search-button, .close-search-desktop').unbind();
+
+			// $('.dropdown').bind( 'click', function(e) {
+				// e.preventDefault();
+				// $('.dropdown-menu').css( 'display', 'none' );
+				// $(this).children('.dropdown-menu').css( 'display', 'block' );
+			// });
+
+    		$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').bind( 'touchstart click', function(e) {
+
+		        e.preventDefault();
+
+		        var currentText = $(this).text();
+
+		        if ( currentText == '-' ) {
+
+		            $(this).text('+');
+
+		            $(this).parent().removeClass('child-nav-open');
+
+		            $(this).removeClass('child-nav-open');
+
+		            $(this).parent().siblings('.dropdown-menu').css( 'display', 'none' );
+
+		        } else if ( currentText == '+' ) {
+
+		            $(this).text('-');
+
+		            $(this).parent().addClass('child-nav-open');
+
+		            $(this).addClass('child-nav-open');
+
+		            $(this).parent().siblings('.dropdown-menu').css( 'display', 'block' );
+		            
+		        }
+
+		    });
+
 		}
-	);	
+
+	});
+
+	if ( windowcheck > 768 ) {
+
+			$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
+
+		    var navTimers = [];
+			$( ".dropdown" ).hover(
+				function () {
+					var id = jQuery.data( this );
+					var $this = $( this );
+					navTimers[id] = setTimeout( function() {
+						$this.children( '.dropdown-menu' ).slideToggle();
+						navTimers[id] = "";
+					}, 300 );
+				},
+				function () {
+					var id = jQuery.data( this );
+					if ( navTimers[id] != "" ) {
+						clearTimeout( navTimers[id] );
+					} else {
+						$( this ).children( ".dropdown-menu" ).toggle();
+					}
+				}
+			);	
+
+			$('.dropdown-toggle span.child-expand-button').text('+');
+
+            $('.dropdown-toggle').removeClass('child-nav-open');
+
+            $('.dropdown-toggle span.child-expand-button').removeClass('child-nav-open');
+
+            $('.dropdown-menu').removeClass('display-child-nav');
+
+		} else {
+
+			$('.dropdown').off( "mouseenter mouseleave" );
+
+			// $('.search-button, .close-search-desktop').unbind();
+
+			// $('.dropdown').bind( 'click', function(e) {
+				// e.preventDefault();
+				// $('.dropdown-menu').css( 'display', 'none' );
+				// $(this).children('.dropdown-menu').css( 'display', 'block' );
+			// });
+
+    		$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').bind( 'touchstart click', function(e) {
+
+		        e.preventDefault();
+
+		        var currentText = $(this).text();
+
+		        if ( currentText == '-' ) {
+
+		            $(this).text('+');
+
+		            $(this).parent().removeClass('child-nav-open');
+
+		            $(this).removeClass('child-nav-open');
+
+		            $(this).parent().siblings('.dropdown-menu').css( 'display', 'none' );
+
+		        } else if ( currentText == '+' ) {
+
+		            $(this).text('-');
+
+		            $(this).parent().addClass('child-nav-open');
+
+		            $(this).addClass('child-nav-open');
+
+		            $(this).parent().siblings('.dropdown-menu').css( 'display', 'block' );
+		            
+		        }
+
+		    });
+
+		}
 
 });
