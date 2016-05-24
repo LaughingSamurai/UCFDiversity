@@ -44,6 +44,10 @@ Template Name: Home
 			<h2>Features</h2>
 
 			<hr>
+
+			<?php global $post; ?>
+
+			<?php wp_reset_query(); ?>
 		
 			<?php
 			$argsfeatures = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
@@ -64,6 +68,8 @@ Template Name: Home
 
 			?>
 
+			<?php wp_reset_query(); ?>
+
 		</div>
 
 		<div class="col-lg-4 col-md-4 col-sm-4">
@@ -71,6 +77,8 @@ Template Name: Home
 			<h2>News</h2>
 
 			<hr>
+
+			<?php wp_reset_query(); ?>
 		
 			<?php
 			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => -4);
@@ -90,6 +98,8 @@ Template Name: Home
 			endforeach; 
 
 			?>
+
+			<?php wp_reset_query(); ?>
 
 		</div>
 
