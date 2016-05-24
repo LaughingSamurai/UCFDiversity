@@ -614,6 +614,10 @@ nav.menu {
     color: #01c0ff;
   }
 
+  #page-content .event a {
+    color: #000000;
+  }
+
   #page-content iframe {
     text-align: center;
     margin: 0 auto;
