@@ -614,7 +614,7 @@ nav.menu {
     color: #01c0ff;
   }
 
-  #page-content .event a {
+  #page-content .event a.see-event-details {
     color: #000000;
   }
 
