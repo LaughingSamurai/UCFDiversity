@@ -111,30 +111,7 @@ Template Name: Home
 
 			<div id="upcoming-diversity-events"></div>
 
-			<script>
-
-				(function() {
-					var flickerAPI = "https://events.ucf.edu/calendar/2829/office-of-diversity-and-inclusion/this-month/feed.json";
-					$.getJSON( flickerAPI, {
-					    format: "json"
-					})
-					.done(function( data ) {
-					    $.each( data, function( key, val ) {
-					        var single_event = 
-					        	'<div class="event">' +
-					        		'<h2>'+val.title+'</h2>' +
-					        		'<span><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></span>' +
-					        		'<p>'+val.description+'</p>' +
-					        		'<a href="'+val.url+'" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
-					        	'</div>';
-					        $( "#upcoming-diversity-events" ).append(single_event);
-					        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
-					        $( ".enddate" ).formatDateTime('MM d, yy g:ii a');
-					    });
-					});
-				})();
-
-			</script>
+			
 
 		</div>
 
