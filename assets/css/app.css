@@ -143,6 +143,8 @@ nav.menu {
       #menu-primary-navigation .active a,
       #menu-primary-navigation a:focus,
       #menu-primary-navigation a:hover,
+      #menu-primary-navigation li:focus,
+      #menu-primary-navigation li:hover,
       .contact:focus,
       .contact:hover {
         background-color: #545454;
@@ -177,14 +179,15 @@ nav.menu {
         .dropdown-menu li a {
           background-color: #545454 !important;
           text-transform: none !important;
+          text-transform: uppercase;
           color: #ffffff !important;
-          padding: 10px;
+          padding: 15px;
         }
 
           .dropdown-menu li a:hover,
           .dropdown-menu li a:focus {
-            background-color: #ffc904 !important;
-            color: #000000 !important;
+            background-color: #000000 !important;
+            color: #ffc904 !important;
           }
 
         .caret {
