@@ -376,9 +376,15 @@ $(document).ready(function(){
 
     });
 
+    $('.dropdown').off( "mouseenter mouseleave" );
+	$('#menu-primary-navigation-1 li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
+
     var windowcheck = $('body').width();
 
 	$( window ).resize(function() {
+
+		$('.dropdown').off( "mouseenter mouseleave" );
+		$('#menu-primary-navigation-1 li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
 
 		var windowcheck = $('body').width();
 
