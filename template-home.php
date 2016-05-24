@@ -35,10 +35,6 @@ Template Name: Home
 
 	<div class="container">
 
-		<!-- <h2><?php the_field('home_events_title'); ?></h2> -->
-
-		<!-- <hr> -->
-
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
 			<h2><?php the_field('home_features_title'); ?></h2>
@@ -57,8 +53,6 @@ Template Name: Home
 			?>
 
 					<h3><?php the_title(); ?></h3>
-
-					<p><?php the_excerpt(); ?></p>
 
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
@@ -91,8 +85,6 @@ Template Name: Home
 			?>
 
 					<h3><?php the_title(); ?></h3>
-
-					<p><?php the_excerpt(); ?></p>
 
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
