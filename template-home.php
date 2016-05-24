@@ -35,9 +35,9 @@ Template Name: Home
 
 	<div class="container">
 
-		<h2><?php the_field('home_events_title'); ?></h2>
+		<!-- <h2><?php the_field('home_events_title'); ?></h2> -->
 
-		<hr>
+		<!-- <hr> -->
 
 		<div class="col-lg-4 col-md-4 col-sm-4">
 
@@ -48,9 +48,9 @@ Template Name: Home
 			<?php wp_reset_query(); ?>
 		
 			<?php
-			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
-			$lastposts = get_posts( $args );
-			foreach($lastposts as $post) : setup_postdata($post);
+			$argsfeatures = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
+			$lastpostsfeatures = get_posts( $argsfeatures );
+			foreach($lastpostsfeatures as $postfeatures) : setup_postdata($postfeatures);
 
 			?>
 
@@ -119,7 +119,6 @@ Template Name: Home
 					.done(function( data ) {
 					    $.each( data, function( key, val ) {
 					        var single_event = 
-					        	'<hr>' +
 					        	'<div class="event">' +
 					        		'<h2>'+val.title+'</h2>' +
 					        		'<span><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></span>' +
