@@ -39,9 +39,9 @@ Template Name: Home
 
 		<!-- <hr> -->
 
-		<div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2>Features</h2>
+			<h2><?php the_field('home_features_title'); ?></h2>
 
 			<hr>
 
@@ -63,6 +63,7 @@ Template Name: Home
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
 					<br/>
+					<br/>
 
 			<?php 
 
@@ -74,9 +75,9 @@ Template Name: Home
 
 		</div>
 
-		<div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2>News</h2>
+			<h2><?php the_field('home_news_titles'); ?></h2>
 
 			<hr>
 
@@ -96,6 +97,7 @@ Template Name: Home
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
 					<br/>
+					<br/>
 
 			<?php 
 
@@ -107,9 +109,9 @@ Template Name: Home
 
 		</div>
 
-		<div class="col-lg-4 col-md-4 col-sm-4">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2>Upcoming Events</h2>
+			<h2><?php the_field('home_events_title'); ?></h2>
 
 			<hr>
 
@@ -127,9 +129,10 @@ Template Name: Home
 					        var single_event = 
 					        	'<div class="event">' +
 					        		'<h3>'+val.title+'</h3>' +
-					        		'<span><span class="startdate">'+val.starts+'</span></span>' +
+					        		'<span class="startdate">'+val.starts+'</span>' +
 					        		'<a href="'+val.url+'" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
-					        		'<br/>'+
+					        		'<br/>' +
+					        		'<br/>' +
 					        	'</div>';
 					        $( "#upcoming-diversity-events" ).append(single_event);
 					        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
