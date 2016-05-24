@@ -24,7 +24,7 @@
 
           <p class="contact">Contact</p>
 
-          <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav', 'link_after' => '<span class="child-expand-button">+</span>' )); ?> 
+          <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav' )); ?> 
 
         </div>
             
@@ -37,7 +37,7 @@
 
 <nav class="menu push-menu-right">
 
-  <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav' )); ?> 
+  <?php wp_nav_menu(array('menu' => 'primary-navigation', 'menu_class' => 'nav navbar-nav', 'link_after' => '<span class="child-expand-button">+</span>' )); ?> 
   
   <p class="contact">Contact</p>
 

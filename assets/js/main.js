@@ -384,8 +384,6 @@ $(document).ready(function(){
 
 		if ( windowcheck > 768 ) {
 
-			$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
-
 		    var navTimers = [];
 			$( ".dropdown" ).hover(
 				function () {
@@ -414,9 +412,9 @@ $(document).ready(function(){
 
             $('.dropdown-menu').removeClass('display-child-nav');
 
-		} else {
+            $('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
 
-			$('.dropdown').off( "mouseenter mouseleave" );
+		} else {
 
 			// $('.search-button, .close-search-desktop').unbind();
 
@@ -455,6 +453,8 @@ $(document).ready(function(){
 		        }
 
 		    });
+
+		    $('.dropdown').off( "mouseenter mouseleave" );
 
 		}
 
@@ -462,8 +462,6 @@ $(document).ready(function(){
 
 	if ( windowcheck > 768 ) {
 
-			$('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
-
 		    var navTimers = [];
 			$( ".dropdown" ).hover(
 				function () {
@@ -492,9 +490,9 @@ $(document).ready(function(){
 
             $('.dropdown-menu').removeClass('display-child-nav');
 
-		} else {
+            $('#menu-primary-navigation li.dropdown a.dropdown-toggle span.child-expand-button').unbind();
 
-			$('.dropdown').off( "mouseenter mouseleave" );
+		} else {
 
 			// $('.search-button, .close-search-desktop').unbind();
 
@@ -533,6 +531,8 @@ $(document).ready(function(){
 		        }
 
 		    });
+
+		    $('.dropdown').off( "mouseenter mouseleave" );
 
 		}
 
