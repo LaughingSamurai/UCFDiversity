@@ -62,6 +62,8 @@ Template Name: Home
 
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
+					<br/>
+
 			<?php 
 
 			endforeach; 
@@ -93,6 +95,8 @@ Template Name: Home
 
 					<a href="<?php the_permalink(); ?>">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
 
+					<br/>
+
 			<?php 
 
 			endforeach; 
@@ -122,14 +126,13 @@ Template Name: Home
 					    $.each( data, function( key, val ) {
 					        var single_event = 
 					        	'<div class="event">' +
-					        		'<h2>'+val.title+'</h2>' +
-					        		'<span><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></span>' +
-					        		'<p>'+val.description+'</p>' +
+					        		'<h3>'+val.title+'</h3>' +
+					        		'<span><span class="startdate">'+val.starts+'</span></span>' +
 					        		'<a href="'+val.url+'" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
+					        		'<br/>'+
 					        	'</div>';
 					        $( "#upcoming-diversity-events" ).append(single_event);
 					        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
-					        $( ".enddate" ).formatDateTime('MM d, yy g:ii a');
 					    });
 					});
 				})();
