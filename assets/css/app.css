@@ -1348,7 +1348,7 @@ nav.menu {
       }
 
       #page-content ul.post-categories {
-        padding: 0 0 10px 0;
+        padding: 0 0 5px 0;
         margin: 0;
       }
 
@@ -1357,6 +1357,7 @@ nav.menu {
         }
 
           #page-content ul.post-categories li a {
+            font-family: "futura-pt-condensed",sans-serif;
             text-decoration: none;
             color: #545454;
           }
@@ -1377,10 +1378,26 @@ nav.menu {
         padding: 0 0 15px 0;
       }
 
-      #page-content .newsroll-single-container h2 a {
-        text-decoration: none;
-        color: #545454;
+        #page-content .newsroll-single-container h2 a {
+          text-decoration: none;
+          color: #545454;
+        }
+
+      #page-content a.newsroll-red-more {
+        font-family: "futura-pt-condensed",sans-serif;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 15px 0 0 0;
+        line-height: 0.800em;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
       }
+
+        #page-content a.newsroll-red-more:hover,
+        #page-content a.newsroll-red-more:focus {
+          text-decoration: underline;
+        }
 
 #page-content #news-sidebar a {
   font-family: "futura-pt-condensed",sans-serif;
@@ -1406,6 +1423,8 @@ nav.menu {
     }
 
   .news-sidebar-header {
+    font-family: "futura-pt-condensed",sans-serif;
+    text-transform: uppercase;
     font-size: 1.250em;
     color: #545454;
   }

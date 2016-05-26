@@ -22,6 +22,8 @@
 
 						<p><?php the_excerpt(); ?></p>
 
+						<a href="<?php the_permalink(); ?>" class="newsroll-red-more">Read more <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_title(); ?>"></a>
+
 						<hr>
 
 					</div>
