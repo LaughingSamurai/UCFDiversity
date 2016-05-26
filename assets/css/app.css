@@ -1336,8 +1336,12 @@ nav.menu {
   }
 
     #page-content .newsroll-single-container {
-      padding: 0 0 20px 0;
+      padding: 0 0 10px 0;
     }
+
+      #page-content .newsroll-single-container .inner {
+        max-width: 80%;
+      }
 
       #page-content .newsroll-single-container hr {
         border-top: 1px solid #ffc904;
@@ -1359,6 +1363,7 @@ nav.menu {
           #page-content ul.post-categories li a {
             font-family: "futura-pt-condensed",sans-serif;
             text-decoration: none;
+            font-size: 1.250em;
             color: #545454;
           }
 
@@ -1369,7 +1374,7 @@ nav.menu {
 
         #page-content ul.post-categories {
           font-family: "futura-pt-condensed",sans-serif;
-          padding: 0 0 15px 0;
+          padding: 0 0 5px 0;
           font-style: normal;
           font-weight: 700;
         }
@@ -1385,6 +1390,7 @@ nav.menu {
 
       #page-content a.newsroll-red-more {
         font-family: "futura-pt-condensed",sans-serif;
+        text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
         padding: 15px 0 0 0;
@@ -1422,7 +1428,7 @@ nav.menu {
       list-style-type: none;
     }
 
-  .news-sidebar-header {
+  #page-content li.news-sidebar-header {
     font-family: "futura-pt-condensed",sans-serif;
     text-transform: uppercase;
     font-size: 1.250em;
