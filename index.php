@@ -22,6 +22,8 @@
 
 						<p><?php the_excerpt(); ?></p>
 
+						<hr>
+
 					</div>
 
 				<?php endwhile; ?>
@@ -35,7 +37,7 @@
 		<div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12">
 
 			<ul>
-				<li class=""></li>
+				<li class="news-sidebar-header">Categories</li>
 			    <?php wp_list_categories( array(
 			    	'title_li' => '',
 			        'orderby' => 'name',
