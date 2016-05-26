@@ -2,7 +2,7 @@
 
 	<div id="page-content" class="container">
 
-		<div id="news-roll" class="col-ld-9 col-md-9 col-sm-9 col-xs-12">
+		<div id="news-roll" class="col-ld-10 col-md-10 col-sm-10 col-xs-12">
 
 			<h1>News</h1>
 
@@ -14,11 +14,15 @@
 
 				<?php while (have_posts()) : the_post(); ?>
 
-					<span><?php the_category( ); ?></span>
+					<div class="newsroll-single-container">
+						
+						<span><?php the_category( ); ?></span>
 
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-					<p><?php the_excerpt(); ?></p>
+						<p><?php the_excerpt(); ?></p>
+
+					</div>
 
 				<?php endwhile; ?>
 					
@@ -28,10 +32,12 @@
 
 		</div>
 
-		<div id="news-sidebar" class="col-ld-3 col-md-3 col-sm-3 col-xs-12">
+		<div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12">
 
 			<ul>
+				<li class=""></li>
 			    <?php wp_list_categories( array(
+			    	'title_li' => '',
 			        'orderby' => 'name',
 			        'exclude' => array( 1 )
 			    ) ); ?> 

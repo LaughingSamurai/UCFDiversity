@@ -37,44 +37,161 @@
 
     <div class="clear"></div>
 
-    <div id="news-roll" class="col-ld-9 col-md-9 col-sm-9 col-xs-12">
+    <div id="news-roll" class="col-ld-10 col-md-10 col-sm-10 col-xs-12">
 
       <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-          <header>
+          
+          <h1><?php the_field('page_title'); ?></h1>
 
-          <div class="blog-single-title-container">
+          <hr>
 
-            <div class="blog-single-title-content">
+          <?php
 
-              <h1 class="entry-title"><?php the_title(); ?></h1>
+          // check if the repeater field has rows of data
+          if( have_rows('column_rows') ):
+
+            // loop through the rows of data
+            while ( have_rows('column_rows') ) : the_row();
+
+          ?>    
+
+            <div class="column-rows">
+
+              <?php if ( get_sub_field('column_full_row') != NULL ) { ?>
+
+                <p><?php the_sub_field('column_full_row'); ?></p>
+
+              <?php } ?>
+                    
+              <div class="<?php if ( get_sub_field('column_row_text_left') != NULL || have_rows('inset_button_left') ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">
+
+                <div class="columned-text">
+                  
+                  <p><?php the_sub_field('column_row_text_left'); ?></p>
+
+                </div>
+
+                <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('inset_button_left') ):
+
+                  // loop through the rows of data
+                  while ( have_rows('inset_button_left') ) : the_row();
+
+                ?>    
+
+                  <div class="<?php the_sub_field('inset_button_left_background_color'); ?> inset-box">
+
+                    <h2><?php the_sub_field('inset_button_left_title'); ?></h2>
+
+                    <p><?php the_sub_field('inset_button_left_content'); ?></p>
+
+                    <?php if ( get_sub_field('inset_button_left_link') != NULL ) { ?>
+
+                      <a href="<?php the_sub_field('inset_button_left_link'); ?>"><?php the_sub_field('inset_button_left_link_text'); ?> <?php if ( get_sub_field('inset_button_left_background_color') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_left_link_text'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_left_link_text'); ?>"><?php } ?></a>
+
+                    <?php } ?>
+
+                  </div>
+
+                <?php 
+
+                  endwhile;
+
+                else :
+
+                  // no rows found
+
+                endif;
+
+                ?>
+
+              </div>
+
+              <div class="<?php if ( get_sub_field('column_row_text_right') || have_rows('inset_button_right') != NULL ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">
+
+                <div class="columned-text">
+                  
+                  <p><?php the_sub_field('column_row_text_right'); ?></p>
+
+                </div>
+
+                <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('inset_button_right') ):
+
+                  // loop through the rows of data
+                  while ( have_rows('inset_button_right') ) : the_row();
+
+                ?>    
+
+                  <div class="<?php the_sub_field('inset_button_right_background_color'); ?> inset-box">
+
+                    <h2><?php the_sub_field('inset_button_right_title'); ?></h2>
+
+                    <p><?php the_sub_field('inset_button_right_content'); ?></p>
+
+                    <?php if ( get_sub_field('inset_button_right_link') != NULL ) { ?>
+
+                      <a href="<?php the_sub_field('inset_button_right_link'); ?>"><?php the_sub_field('inset_button_right_link_text'); ?> <?php if ( get_sub_field('inset_button_right_background_color') == 'black' ) { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/gold-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text'); ?>"><?php  } else { ?><img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="<?php the_sub_field('inset_button_right_link_text'); ?>"><?php } ?></a>
+
+                    <?php } ?>
+          
+                  </div>
+
+                <?php 
+
+                  endwhile;
+
+                else :
+
+                  // no rows found
+
+                endif;
+
+                ?>
+
+              </div>
+
+              <div class="clear"></div>
+
+              <?php if ( get_sub_field('bottom_divider') == "yes" ) { ?>
+
+                <hr>
+
+              <?php } ?>
 
             </div>
 
-          </div>
+          <?php 
 
-          </header>
-          <div class="entry-content row">
+            endwhile;
 
-            <div class="single-post-content">
+          else :
 
-              <?php the_post_thumbnail( 'full' ); ?>
-              
-              <?php the_content(); ?>
+            // no rows found
 
-            </div>
+          endif;
 
-          </div>
+          ?>
+
+
+
+          <div class="clear"></div>
 
         </article>
       <?php endwhile; ?>
 
     </div>
 
-    <div id="news-sidebar" class="col-ld-3 col-md-3 col-sm-3 col-xs-12">
+    <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12">
 
       <ul>
           <?php wp_list_categories( array(
+            'title_li' => '',
               'orderby' => 'name',
               'exclude' => array( 1 )
           ) ); ?> 

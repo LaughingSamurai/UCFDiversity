@@ -1324,10 +1324,56 @@ nav.menu {
 
 
 /* ==========================================================================
-   Sidebar
+   News
    ========================================================================== */
 
-#sidebar { }
+#news-content-container #page-content {
+  padding: 150px 0 50px 0;
+}
+
+  #news-roll {
+    float: right;
+  }
+
+    #page-content .newsroll-single-container {
+      padding: 0 0 20px 0;
+    }
+
+      #page-content .newsroll-single-container hr {
+        border-top: 1px solid #ffc904;
+        margin-bottom: 20px;
+        text-align: left;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      #page-content ul.post-categories {
+        margin: 0;
+      }
+
+        #page-content ul.post-categories {
+          font-family: "futura-pt-condensed",sans-serif;
+          padding: 0 0 15px 0;
+          font-style: normal;
+          font-weight: 700;
+        }
+
+      #page-content .newsroll-single-container h2 a {
+        text-decoration: none;
+        color: #545454;
+      }
+
+#news-sidebar a {
+  font-family: "futura-pt-condensed",sans-serif;
+  padding: 0 0 15px 0;
+  font-size: 1.250em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+  #page-content #news-sidebar ul {
+    margin: 0;
+  }
 
 
 
