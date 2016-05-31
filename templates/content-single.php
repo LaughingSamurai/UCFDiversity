@@ -1,16 +1,20 @@
 <div id="news-content-container">
 
-  <div id="page-tabs" class="container desktop">
+  <div id="page-tabs" class="container">
 
-    <ul>
-      <li class="news-sidebar-header">Categories</li>
-      <li><hr></li>
-         <?php wp_list_categories( array(
-          'title_li' => '',
-             'orderby' => 'name',
-             'exclude' => array( 1 )
-         ) ); ?> 
-    </ul>
+    <div class="sibling-nav">
+
+      <p class="filter-dropdown-button">See More &#9662;</p>
+
+      <ul>
+        <?php wp_list_categories( array(
+            'title_li' => '',
+            'orderby' => 'name',
+            'exclude' => array( 1 )
+        ) ); ?> 
+      </ul>
+
+    </div>
 
   </div>
 
@@ -201,7 +205,7 @@
 
     </div>
 
-    <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
+    <!-- <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
 
       <ul>
         <li class="news-sidebar-header">Categories</li>
@@ -213,7 +217,7 @@
           ) ); ?> 
       </ul>
 
-    </div>
+    </div> -->
 
   </div>
 
