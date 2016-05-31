@@ -1,5 +1,19 @@
 <div id="news-content-container">
 
+  <div id="page-tabs" class="container desktop">
+
+    <ul>
+      <li class="news-sidebar-header">Categories</li>
+      <li><hr></li>
+         <?php wp_list_categories( array(
+          'title_li' => '',
+             'orderby' => 'name',
+             'exclude' => array( 1 )
+         ) ); ?> 
+    </ul>
+
+  </div>
+
   <div id="page-content" class="container">
 
     <?php $actual_link = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}/{$_SERVER['REQUEST_URI']}" ?>
@@ -187,10 +201,11 @@
 
     </div>
 
-    <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12">
+    <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
 
       <ul>
         <li class="news-sidebar-header">Categories</li>
+        <li><hr></li>
           <?php wp_list_categories( array(
             'title_li' => '',
               'orderby' => 'name',
