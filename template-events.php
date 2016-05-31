@@ -309,7 +309,7 @@ Template Name: Events
 			    format: "json"
 			})
 			.done(function( data ) {
-			    $.each( data, function( key, val ) {
+			    $.each( data.slice(0,10), function( key, val ) {
 			        var single_event = 
 			        	'<hr>' +
 			        	'<div class="event">' +

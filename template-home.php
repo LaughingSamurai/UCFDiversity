@@ -117,7 +117,7 @@ Template Name: Home
 					    format: "json"
 					})
 					.done(function( data ) {
-					    $.each( data, function( key, val ) {
+					    $.each( data.slice(0,3), function( key, val ) {
 					        var single_event = 
 					        	'<div class="event">' +
 					        		'<h3>'+val.title+'</h3>' +
