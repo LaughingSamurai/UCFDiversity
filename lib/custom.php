@@ -94,6 +94,18 @@ function get_depth($id = '', $depth = '', $i = 0)
 	}
 }
 
+// Usage:
+// get_id_by_slug('any-page-slug');
+
+function get_id_by_slug($page_slug) {
+	$page = get_page_by_path($page_slug);
+	if ($page) {
+		return $page->ID;
+	} else {
+		return null;
+	}
+}
+
 /* Event Taxonomies
 add_action( 'init', 'build_taxonomies', 0 );
 
