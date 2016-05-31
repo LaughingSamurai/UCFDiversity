@@ -1330,11 +1330,11 @@ nav.menu {
    ========================================================================== */
 
 #news-content-container #page-tabs {
-  padding: 0 0 10px 0;
+  padding: 0 0 9px 0;
 }
 
 #news-content-container #page-content {
-  padding: 50px 0;
+  padding: 50px 35px;
 }
 
   #news-roll {
@@ -1996,6 +1996,14 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .brand {
     max-width: 75%;
+  }
+
+  #news-content-container #page-tabs {
+    padding: 0;
+  }
+
+  #page-content .newsroll-single-container .inner {
+    max-width: 100%;
   }
 
 }
