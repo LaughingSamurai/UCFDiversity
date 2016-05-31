@@ -7,6 +7,7 @@
       <p class="filter-dropdown-button">See More &#9662;</p>
 
       <ul>
+        <li><a href="<?php echo home_url(); ?>/news">All News</a></li>
         <?php wp_list_categories( array(
             'title_li' => '',
             'orderby' => 'name',
@@ -55,7 +56,7 @@
 
     <div class="clear"></div>
 
-    <div id="news-roll" class="col-ld-10 col-md-10 col-sm-10 col-xs-12">
+    <div id="news-roll" class="col-ld-12 col-md-12 col-sm-12 col-xs-12">
 
       <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
