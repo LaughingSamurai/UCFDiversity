@@ -53,9 +53,7 @@
 
 			<?php if ( is_category() ) { ?>
 
-				<?php $current_category = single_cat_title(); ?>
-
-				<h1><?php echo $current_category; ?></h1>
+				<h1><?php $current_category = single_cat_title(); ?></h1>
 
 			<?php } else if ( is_archive() ) { ?>
 
