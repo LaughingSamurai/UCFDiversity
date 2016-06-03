@@ -83,7 +83,7 @@
 
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-								<span class="article-meta"><?php the_date( 'F j, Y' ); ?></span>
+								<span class="article-meta"><?php the_time( 'F j, Y' ); ?></span>
 
 								<div class="news-excerpt"><?php the_field('news_excerpt', $post->id); ?></div>
 
@@ -96,6 +96,13 @@
 						</div>
 
 					<?php endwhile; ?>
+
+					<div id="post-nav">
+
+						<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+						<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+					</div>
 						
 				<?php endif; ?>
 
