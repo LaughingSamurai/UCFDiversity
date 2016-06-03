@@ -1479,7 +1479,7 @@ nav.menu {
     color: #545454;
   }
 
-#news-content-container #post-nav ul a {
+#page-content #post-nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.250em;
