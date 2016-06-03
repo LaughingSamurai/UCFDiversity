@@ -28,25 +28,6 @@
 
   <div id="page-content-container">
 
-    <div id="page-tabs" class="container">
-
-      <div class="sibling-nav">
-
-        <p class="filter-dropdown-button">See More &#9662;</p>
-
-        <ul>
-          <li><a href="<?php echo home_url(); ?>/news">All News</a></li>
-          <?php wp_list_categories( array(
-              'title_li' => '',
-              'orderby' => 'name',
-              'exclude' => array( 1 )
-          ) ); ?> 
-        </ul>
-
-      </div>
-
-    </div>
-
     <div id="page-content" class="container">
 
       <?php $actual_link = 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . "{$_SERVER['HTTP_HOST']}/{$_SERVER['REQUEST_URI']}" ?>
@@ -84,12 +65,45 @@
 
       <div class="clear"></div>
 
-      <div id="news-roll" class="col-ld-12 col-md-12 col-sm-12 col-xs-12">
+      <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 desktop">
+
+          <ul>
+            <li class="news-sidebar-header">Categories</li>
+            <li><hr></li>
+              <?php wp_list_categories( array(
+                'title_li' => '',
+                  'orderby' => 'name',
+                  'exclude' => array( 1 )
+              ) ); ?> 
+          </ul>
+
+          <ul>
+            <li class="news-sidebar-header">Archives</li>
+            <li><hr></li>
+            <?php $args = array(
+              'type'            => 'monthly',
+              'limit'           => '',
+              'format'          => 'html', 
+              'before'          => '',
+              'after'           => '',
+              'show_post_count' => false,
+              'echo'            => 1,
+              'order'           => 'DESC',
+                    'post_type'     => 'post'
+            );
+            wp_get_archives( $args ); ?>
+          </ul>
+
+      </div>
+
+      <div id="news-roll" class="col-ld-10 col-md-10 col-sm-10 col-xs-12">
 
         <?php while (have_posts()) : the_post(); ?>
           <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
             
             <h1><?php the_field('page_title'); ?></h1>
+
+            <span class="article-meta"><?php the_date( 'F j, Y' ); ?></span>
 
             <hr>
 
@@ -234,19 +248,36 @@
 
       </div>
 
-      <!-- <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
+      <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
 
-        <ul>
-          <li class="news-sidebar-header">Categories</li>
-          <li><hr></li>
-            <?php wp_list_categories( array(
-              'title_li' => '',
-                'orderby' => 'name',
-                'exclude' => array( 1 )
-            ) ); ?> 
-        </ul>
+          <ul>
+            <li class="news-sidebar-header">Categories</li>
+            <li><hr></li>
+              <?php wp_list_categories( array(
+                'title_li' => '',
+                  'orderby' => 'name',
+                  'exclude' => array( 1 )
+              ) ); ?> 
+          </ul>
 
-      </div> -->
+          <ul>
+            <li class="news-sidebar-header">Archives</li>
+            <li><hr></li>
+            <?php $args = array(
+              'type'            => 'monthly',
+              'limit'           => '',
+              'format'          => 'html', 
+              'before'          => '',
+              'after'           => '',
+              'show_post_count' => false,
+              'echo'            => 1,
+              'order'           => 'DESC',
+                    'post_type'     => 'post'
+            );
+            wp_get_archives( $args ); ?>
+          </ul>
+
+      </div>
 
     </div>
 

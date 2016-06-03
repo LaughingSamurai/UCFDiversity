@@ -16,30 +16,52 @@
 
 	<div id="page-content-container">
 
-		<div id="page-tabs" class="container">
+		<div id="page-content" class="container">
 
-			<div class="sibling-nav">
+			<div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 desktop">
 
-				<p class="filter-dropdown-button">See More &#9662;</p>
+					<ul>
+						<li class="news-sidebar-header">Categories</li>
+						<li><hr></li>
+					    <?php wp_list_categories( array(
+					    	'title_li' => '',
+					        'orderby' => 'name',
+					        'exclude' => array( 1 )
+					    ) ); ?> 
+					</ul>
 
-				<ul>
-					<li><a href="<?php echo home_url(); ?>/news">All News</a></li>
-					<?php wp_list_categories( array(
-					    'title_li' => '',
-					    'orderby' => 'name',
-					    'exclude' => array( 1 )
-					) ); ?> 
-				</ul>
+					<ul>
+						<li class="news-sidebar-header">Archives</li>
+						<li><hr></li>
+						<?php $args = array(
+							'type'            => 'monthly',
+							'limit'           => '',
+							'format'          => 'html', 
+							'before'          => '',
+							'after'           => '',
+							'show_post_count' => false,
+							'echo'            => 1,
+							'order'           => 'DESC',
+						        'post_type'     => 'post'
+						);
+						wp_get_archives( $args ); ?>
+					</ul>
 
 			</div>
 
-		</div>
+			<div id="news-roll" class="col-ld-10 col-md-10 col-sm-10 col-xs-12">
 
-		<div id="page-content" class="container">
+			<?php if ( is_category() ) { ?>
 
-			<div id="news-roll" class="col-ld-12 col-md-12 col-sm-12 col-xs-12">
+				<?php $current_category = single_cat_title(); ?>
+
+				<h1><?php echo $current_category; ?></h1>
+
+			<?php } else { ?>
 
 				<h1>News</h1>
+
+			<?php } ?>
 
 				<hr>
 
@@ -54,10 +76,10 @@
 						<div class="newsroll-single-container">
 
 							<div class="inner">
-							
-								<!-- <span><?php the_category( ); ?></span> -->
 
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+								<span class="article-meta"><?php the_date( 'F j, Y' ); ?></span>
 
 								<div class="news-excerpt"><?php the_field('news_excerpt', $post->id); ?></div>
 
@@ -77,19 +99,36 @@
 
 			</div>
 
-			<!-- <div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
+			<div id="news-sidebar" class="col-ld-2 col-md-2 col-sm-2 col-xs-12 mobile">
 
-				<ul>
-					<li class="news-sidebar-header">Categories</li>
-					<li><hr></li>
-				    <?php wp_list_categories( array(
-				    	'title_li' => '',
-				        'orderby' => 'name',
-				        'exclude' => array( 1 )
-				    ) ); ?> 
-				</ul>
+		          <ul>
+		            <li class="news-sidebar-header">Categories</li>
+		            <li><hr></li>
+		              <?php wp_list_categories( array(
+		                'title_li' => '',
+		                  'orderby' => 'name',
+		                  'exclude' => array( 1 )
+		              ) ); ?> 
+		          </ul>
 
-			</div> -->
+		          <ul>
+		            <li class="news-sidebar-header">Archives</li>
+		            <li><hr></li>
+		            <?php $args = array(
+		              'type'            => 'monthly',
+		              'limit'           => '',
+		              'format'          => 'html', 
+		              'before'          => '',
+		              'after'           => '',
+		              'show_post_count' => false,
+		              'echo'            => 1,
+		              'order'           => 'DESC',
+		                    'post_type'     => 'post'
+		            );
+		            wp_get_archives( $args ); ?>
+		          </ul>
+
+		      </div>
 
 		</div>
 

@@ -2006,6 +2006,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     max-width: 100%;
   }
 
+  #news-content-container #page-content {
+    padding: 50px 0;
+  }
+
 }
 
 @media (max-width: 600px) {
