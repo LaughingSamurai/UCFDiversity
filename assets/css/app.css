@@ -1883,7 +1883,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
         overflow: hidden;
       }
       nav.menu {
-        position: absolute;
+        position: fixed;
         z-index: 20;
         background-color: #ffc904;
         overflow: scroll;
