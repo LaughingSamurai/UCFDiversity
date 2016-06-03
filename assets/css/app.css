@@ -67,6 +67,14 @@ img {
   clear: both;
 }
 
+#news-content-container .desktop {
+  display: block;
+}
+
+#news-content-container .mobile {
+  display: none;
+}
+
 
 
 
@@ -1411,6 +1419,20 @@ nav.menu {
           text-decoration: underline;
         }
 
+.article-meta {
+  padding: 10px 0 0 0;
+  font-size: 1.500em;
+  color: #545454;
+}
+
+#page-content #news-sidebar li hr {
+  border-top: 4px solid #ffc904;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-top: 5px;
+  width: 80%;
+}
+
 #page-content #news-sidebar a {
   font-family: "futura-pt-condensed",sans-serif;
   text-decoration: none;
@@ -2008,6 +2030,14 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   #news-content-container #page-content {
     padding: 50px 0;
+  }
+
+  #news-content-container .desktop {
+    display: none;
+  }
+
+  #news-content-container .mobile {
+    display: block;
   }
 
 }
