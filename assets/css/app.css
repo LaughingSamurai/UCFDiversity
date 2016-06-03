@@ -1479,6 +1479,12 @@ nav.menu {
     color: #545454;
   }
 
+#page-content #post-nav ul a {
+  text-transform: uppercase;
+  font-size: 1.250em;
+  color: #545454;
+}
+
 
 
 /* ==========================================================================
