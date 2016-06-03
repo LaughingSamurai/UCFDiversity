@@ -1433,6 +1433,14 @@ nav.menu {
   color: #545454;
 }
 
+.post hr {
+    border-top: 10px solid #ffc904;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 10px;
+    width: 18%;
+}
+
 #page-content #news-sidebar li hr {
   border-top: 4px solid #ffc904;
   margin-bottom: 5px;
