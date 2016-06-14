@@ -331,6 +331,10 @@ nav.menu {
     color: #1846a6;
   }
 
+    #home-events h2 a {
+      color: #1846a6;
+    }
+
   #home-events.home-section hr {
     margin-bottom: 30px;
 }
@@ -1489,14 +1493,17 @@ nav.menu {
 
 
 /* ==========================================================================
-   Posts
+   Thumbnail
    ========================================================================== */
 
-.hentry header { }
-.hentry time { }
-.hentry p.byline { }
-.hentry .entry-content { }
-.hentry footer { }
+.thumbnail {
+  max-height: 225px;
+  margin: 10px;
+}
+
+  .thumbnail .caption {
+    line-height: 1.000em;
+  }
 
 
 

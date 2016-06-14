@@ -37,7 +37,17 @@ Template Name: Home
 
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2><?php the_field('home_features_title'); ?></h2>
+			<?php
+
+				// Get the ID of a given category
+			    $category_id = get_cat_ID( 'Features' );
+
+			    // Get the URL of this category
+			    $category_link = get_category_link( $category_id );
+
+			?>
+
+			<h2><a href="<?php echo esc_url( $category_link ); ?>"><?php the_field('home_features_title'); ?></a></h2>
 
 			<hr>
 
@@ -46,7 +56,7 @@ Template Name: Home
 			<?php wp_reset_query(); ?>
 		
 			<?php
-			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => 4);
+			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category_name' => 'features');
 			$lastposts = get_posts( $args );
 			foreach($lastposts as $post) : setup_postdata($post);
 
@@ -71,17 +81,17 @@ Template Name: Home
 
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2><?php the_field('home_news_titles'); ?></h2>
+			<h2><a href="<?php echo get_permalink( get_page_by_path( 'News' ) ) ?>"><?php the_field('home_news_titles'); ?></a></h2>
 
 			<hr>
 
 			<?php wp_reset_query(); ?>
 		
 			<?php
-			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => -4);
+			$cat_id = get_cat_ID('features');
+			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => -$cat_id);
 			$lastposts = get_posts( $args );
 			foreach($lastposts as $post) : setup_postdata($post);
-
 			?>
 
 					<h3><?php the_title(); ?></h3>
@@ -103,7 +113,7 @@ Template Name: Home
 
 		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-			<h2><?php the_field('home_events_title'); ?></h2>
+			<h2><a href="<?php echo get_permalink( get_page_by_path( 'Events' ) ) ?>"><?php the_field('home_events_title'); ?></a></h2>
 
 			<hr>
 

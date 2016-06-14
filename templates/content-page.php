@@ -158,6 +158,8 @@
 
 				<p><?php the_sub_field('column_full_row'); ?></p>
 
+				<div class="clear"></div>
+
 			<?php } ?>
 						
 			<div class="<?php if ( get_sub_field('column_row_text_left') != NULL || have_rows('inset_button_left') ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">

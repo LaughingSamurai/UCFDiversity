@@ -165,6 +165,8 @@ Template Name: Events
 
 				<p><?php the_sub_field('column_full_row'); ?></p>
 
+				<div class="clear"></div>
+
 			<?php } ?>
 						
 			<div class="<?php if ( get_sub_field('column_row_text_left') != NULL || have_rows('inset_button_left') ) { ?>column <?php } ?>col-lg-6 col-md-6 col-sm-6">
@@ -283,11 +285,11 @@ Template Name: Events
 
 	<div class="clear"></div>
 
-	<div id="event-roll">
+	<ul id="event-roll">
 		
 		
 
-	</div>
+	</ul>
 
 	<!--[if IE 9]>
 
@@ -301,6 +303,8 @@ Template Name: Events
 
 	<![endif]-->
 
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/jquery.easyPaginate.js"></script>
+
 	<script>
 
 		(function() {
@@ -309,21 +313,29 @@ Template Name: Events
 			    format: "json"
 			})
 			.done(function( data ) {
-			    $.each( data.slice(0,10), function( key, val ) {
+			    $.each( data, function( key, val ) {
 			        var single_event = 
-			        	'<hr>' +
-			        	'<div class="event">' +
-			        		'<h2>'+val.title+'</h2>' +
-			        		'<h3><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></h3>' +
-			        		'<p>'+val.description+'</p>' +
-			        		'<a href="'+val.url+'" class="see-event-details" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
-			        	'</div>';
+			       		'<li>' +
+				        	'<div class="event">' +
+				        		'<hr>' +
+				        		'<h2>'+val.title+'</h2>' +
+				        		'<h3><span class="startdate">'+val.starts+'</span> - <span class="enddate">'+val.ends+'</span></h3>' +
+				        		'<p>'+val.description+'</p>' +
+				        		'<a href="'+val.url+'" class="see-event-details" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
+				        	'</div>'+
+			        	'</li>';
 			        $( "#event-roll" ).append(single_event);
 			        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
 			        $( ".enddate" ).formatDateTime('MM d, yy g:ii a');
 			    });
 			});
 		})();
+
+		$('#event-roll').easyPaginate({
+		    paginateElement: 'event',
+		    elementsPerPage: 10,
+		    effect: 'climb'
+		});
 
 	</script>
 
