@@ -1497,12 +1497,12 @@ nav.menu {
    ========================================================================== */
 
 .thumbnail {
-  max-height: 225px;
-  margin: 10px;
+  max-height: 225px !important;
+  margin: 10px !important;
 }
 
   .thumbnail .caption {
-    line-height: 1.000em;
+    line-height: 1.000em !important;
   }
 
 
