@@ -333,11 +333,15 @@ Template Name: Events
 
 		$(document).ready(function(){
 
-			$('#event-roll').easyPaginate({
-			    paginateElement: 'li',
-			    elementsPerPage: 10,
-			    effect: 'climb'
-			});
+			setTimeout(function(){
+
+				$('#event-roll').easyPaginate({
+				    paginateElement: 'li',
+				    elementsPerPage: 10,
+				    effect: 'climb'
+				});
+
+			}, 1000);
 
 		});
 
