@@ -332,8 +332,14 @@ nav.menu {
   }
 
     #home-events h2 a {
+      font-family: "futura-pt-condensed-n8", "futura-pt-condensed",sans-serif;
       color: #1846a6;
     }
+
+      #home-events h2 a:hover,
+      #home-events h2 a:focus {
+        text-decoration: none;
+      }
 
   #home-events.home-section hr {
     margin-bottom: 30px;
@@ -1266,8 +1272,22 @@ nav.menu {
     }
 
 
+#page-content ul.thumbnails.gallery {
+  margin: 0;
+}
 
+  #page-content ul.thumbnails.gallery li {
+    list-style-type: none;
+    display: inline-block;
+  }
 
+#page-content ul#event-roll {
+  margin: 0;
+}
+
+  #page-content ul#event-roll li {
+    list-style-type: none;
+  }
 
 #page-content .event h2,
 #page-content #staff-roll h2 {

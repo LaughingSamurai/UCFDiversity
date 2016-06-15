@@ -44,7 +44,7 @@ $(document).ready(function(){
       var el = $(this);
       var link = el.attr('href');
       window.location = link;
-   });
+    });
 
 	$( '.filter-dropdown-button' ).click(
 	    function() {

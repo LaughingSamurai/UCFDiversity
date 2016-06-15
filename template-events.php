@@ -331,10 +331,14 @@ Template Name: Events
 			});
 		})();
 
-		$('#event-roll').easyPaginate({
-		    paginateElement: 'event',
-		    elementsPerPage: 10,
-		    effect: 'climb'
+		$(document).ready(function(){
+
+			$('#event-roll').easyPaginate({
+			    paginateElement: 'event',
+			    elementsPerPage: 10,
+			    effect: 'climb'
+			});
+
 		});
 
 	</script>
