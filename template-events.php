@@ -341,6 +341,14 @@ Template Name: Events
 				    effect: 'climb'
 				});
 
+				$( '#page-content .easyPaginateNav a' ).click(
+				    function() {
+				    	$('html, body').animate({
+					        scrollTop: $("#event-roll").offset().top
+					    }, 1000);
+				    }
+				);
+
 			}, 1000);
 
 		});
