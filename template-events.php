@@ -315,7 +315,7 @@ Template Name: Events
 			.done(function( data ) {
 			    $.each( data, function( key, val ) {
 			        var single_event = 
-			       		'<li>' +
+			       		'<li class="event-section">' +
 				        	'<div class="event">' +
 				        		'<hr>' +
 				        		'<h2>'+val.title+'</h2>' +
@@ -336,7 +336,7 @@ Template Name: Events
 			setTimeout(function(){
 
 				$('#event-roll').easyPaginate({
-				    paginateElement: 'li',
+				    paginateElement: 'li.event-section',
 				    elementsPerPage: 10,
 				    effect: 'climb'
 				});
