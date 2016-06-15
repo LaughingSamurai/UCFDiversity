@@ -1361,7 +1361,20 @@ nav.menu {
 
 .easyPaginateNav {
   border-top: 1px #ffc904 solid;
+  padding: 20px 0 0 0;
+  text-align: center;
 }
+
+  #page-content .easyPaginateNav a {
+    font-size: 1.500em;
+    color: #000000;
+    margin: 4px;
+  }
+
+    #page-content .easyPaginateNav a.first,
+    #page-content .easyPaginateNav a.last {
+      display: none;
+    }
 
 
 
