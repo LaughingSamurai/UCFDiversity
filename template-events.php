@@ -285,11 +285,11 @@ Template Name: Events
 
 	<div class="clear"></div>
 
-	<ul id="event-roll">
+	<div id="event-roll">
 		
 		
 
-	</ul>
+	</div>
 
 	<!--[if IE 9]>
 
@@ -315,7 +315,7 @@ Template Name: Events
 			.done(function( data ) {
 			    $.each( data, function( key, val ) {
 			        var single_event = 
-			       		'<li class="event-section">' +
+			       		'<section class="event-section">' +
 				        	'<div class="event">' +
 				        		'<hr>' +
 				        		'<h2>'+val.title+'</h2>' +
@@ -323,7 +323,7 @@ Template Name: Events
 				        		'<p>'+val.description+'</p>' +
 				        		'<a href="'+val.url+'" class="see-event-details" target="_blank">See Details <img src="<?php echo get_template_directory_uri(); ?>/assets/img/black-arrow.png" alt="See Details"></a>' +
 				        	'</div>'+
-			        	'</li>';
+			        	'</section>';
 			        $( "#event-roll" ).append(single_event);
 			        $( ".startdate" ).formatDateTime('MM d, yy g:ii a');
 			        $( ".enddate" ).formatDateTime('MM d, yy g:ii a');
@@ -336,7 +336,7 @@ Template Name: Events
 			setTimeout(function(){
 
 				$('#event-roll').easyPaginate({
-				    paginateElement: 'li.event-section',
+				    paginateElement: 'section',
 				    elementsPerPage: 10,
 				    effect: 'climb'
 				});
