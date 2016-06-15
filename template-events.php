@@ -334,7 +334,7 @@ Template Name: Events
 		$(document).ready(function(){
 
 			$('#event-roll').easyPaginate({
-			    paginateElement: 'event',
+			    paginateElement: 'li',
 			    elementsPerPage: 10,
 			    effect: 'climb'
 			});
