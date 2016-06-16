@@ -649,7 +649,7 @@ nav.menu {
     width: 75%;
   }
 
-  .post #page-content h1 {
+  #page-content .post h1 {
     width: 100%;
   }
 
