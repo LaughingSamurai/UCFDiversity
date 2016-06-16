@@ -1552,6 +1552,8 @@ nav.menu {
 
   .thumbnail .caption {
     line-height: 1.000em !important;
+    max-height: 75px !important;
+    overflow: scroll !important;
   }
 
 
