@@ -649,6 +649,10 @@ nav.menu {
     width: 75%;
   }
 
+  .post #page-content h1 {
+    width: 100%;
+  }
+
   #page-content li,
   #page-content p {
     font-family: "adobe-caslon-pro",serif;
@@ -1492,6 +1496,14 @@ nav.menu {
     text-align: left;
     margin-top: 10px;
     width: 18%;
+}
+
+.post .column-rows hr {
+    border-top: 1px solid #ffc904;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 60px;
+    width: 100%;
 }
 
 #page-content #news-sidebar li hr {
