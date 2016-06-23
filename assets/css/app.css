@@ -1670,7 +1670,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     text-align: center;
     float: left;
     height: 45px;
-    width: 45px;
+    width: 38px;
   }
 
     #social-navigation li img {
@@ -1751,7 +1751,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .brand {
     font-size: 1.500em;
-    max-width: 135px;
+    max-width: 130px;
   }
 
 }
@@ -1930,6 +1930,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     #content-info .col-md-3 {
       padding: 5px 15px;
     }
+
+#banner .container {
+    padding: 0;
+}
 
   .push-menu-right-toggle {
     background-color: #ffc904;
@@ -2115,6 +2119,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .navbar-header {
     background-color: #ffc904;
+    height: 53px;
   }
 
   .brand {
