@@ -1932,7 +1932,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     }
 
 #banner .container {
-    padding: 0;
+    padding: 0 8px;
 }
 
   .push-menu-right-toggle {
@@ -2180,6 +2180,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .push-menu-right-toggle {
     padding: 25px 15px;
+  }
+
+  .navbar-header {
+    height: 75px;
   }
 
 }
