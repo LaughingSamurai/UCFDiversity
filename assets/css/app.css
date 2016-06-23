@@ -1645,6 +1645,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     padding-bottom: 13px;
   }
 
+  #banner .container {
+    padding: 0 15px;
+  }
+
   .container {
   	width: 100%;
   }
@@ -1734,7 +1738,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 }
 
-@media (max-width: 878px) {
+@media (max-width: 920px) {
 
   #menu-primary-navigation a,
   .contact {
@@ -1742,16 +1746,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .contact {
-    padding: 10px;
+    padding: 11px 10px 10px 10px;
   }
 
-}
-
-@media (max-width: 815px) {
-
   .brand {
-    font-size: 1.750em;
-    max-width: 165px;
+    font-size: 1.500em;
+    max-width: 135px;
   }
 
 }
@@ -2086,6 +2086,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     z-index: 1000;
     float: none;
   }
+
+  	.dropdown-menu li a {
+  		white-space: normal;
+  	}
 
   html {
     width: 100%;
