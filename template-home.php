@@ -56,7 +56,7 @@ Template Name: Home
 			<?php wp_reset_query(); ?>
 		
 			<?php
-			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category_name' => 'features');
+			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'DESC', 'posts_per_page' => 3, 'category_name' => 'features');
 			$lastposts = get_posts( $args );
 			foreach($lastposts as $post) : setup_postdata($post);
 
@@ -89,7 +89,7 @@ Template Name: Home
 		
 			<?php
 			$cat_id = get_cat_ID('features');
-			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'ASC', 'posts_per_page' => 3, 'category' => -$cat_id);
+			$args = array( 'post_type' => 'post', 'orderby'=> 'menu_order', 'order'=>'DESC', 'posts_per_page' => 3, 'category' => -$cat_id);
 			$lastposts = get_posts( $args );
 			foreach($lastposts as $post) : setup_postdata($post);
 			?>
