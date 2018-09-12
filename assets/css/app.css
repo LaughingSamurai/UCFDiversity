@@ -1633,12 +1633,13 @@ nav.menu {
       max-width: 75%;
     }
 
-      .timeline-container .slide h3 {
+      #page-content .timeline-container .slide h3 {
         font-family: "futura-pt-condensed-n8", "futura-pt-condensed",sans-serif;
         background-color: #FFC411;
         display: inline-block;
         font-size: 2.875em;
-        padding: 3px 3px 0 3px;
+        padding: 3px 5px 0 7px;
+        font-weight: 900;
         color: #000000;
       }
 
