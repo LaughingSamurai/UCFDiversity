@@ -54,14 +54,18 @@ $(document).ready(function(){
 
 	if ($('.timeline-container').length){
 
+		var rooturl = document.location.href;
+		var url = rooturl.replace(/\/+$/, '');
+		url = url.substr(0, url.lastIndexOf("/"));
+
 		// Initialize Timeline Slider
 		var slider = $('.timeline-content').slick({
 	    	infinite: true,
 	    	slidesToShow: 1,
 			slidesToScroll: 1,
 			draggable: false,
-	    	prevArrow: '<div class="arrow previous-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev.svg" alt="Previous Slide" /></div>',
-	    	nextArrow: '<div class="arrow next-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next.svg" alt="Next Slide" /></div>',
+	    	prevArrow: '<div class="arrow previous-arrow"><img src="'+url+'/wp-content/themes/UCFDiversity/assets/img/prev.svg" alt="Previous Slide" /></div>',
+	    	nextArrow: '<div class="arrow next-arrow"><img src="'+url+'/wp-content/themes/UCFDiversity/assets/img/next.svg" alt="Next Slide" /></div>',
 			variableWidth: true
 	    });
 
