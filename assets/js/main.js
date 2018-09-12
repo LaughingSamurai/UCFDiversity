@@ -52,6 +52,47 @@ $(document).ready(function(){
 	    }
 	);
 
+	if ($('.timeline-container').length){
+
+		// Initialize Timeline Slider
+		var slider = $('.timeline-content').slick({
+	    	infinite: true,
+	    	slidesToShow: 1,
+			slidesToScroll: 1,
+			draggable: false,
+	    	prevArrow: '<div class="arrow previous-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev.svg" alt="Previous Slide" /></div>',
+	    	nextArrow: '<div class="arrow next-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next.svg" alt="Next Slide" /></div>',
+			variableWidth: true
+	    });
+
+		// Initial Responsive for Timeline Slider
+	    var width = $('.timeline-container').width();
+		if ( width < 768 ) {
+			$('.slide, .quarter-width, .third-width, .half-width, .full-width').width(width);
+		} else {
+			$('.quarter-width').width(width/4);
+	    	$('.third-width').width(width/3);
+	    	$('.half-width').width(width/2);
+	    	$('.full-width').width(width);
+		}
+
+		// Resize Responsive for Timeline Slider
+		$(window).on('resize', function(e) {
+
+			var width = $('.timeline-container').width();
+			if ( width < 768 ) {
+				$('.slide, .quarter-width, .third-width, .half-width, .full-width').width(width);
+			} else {
+				$('.quarter-width').width(width/4);
+		    	$('.third-width').width(width/3);
+		    	$('.half-width').width(width/2);
+		    	$('.full-width').width(width);
+			}
+
+		});
+
+	}
+
 	var browserWidth = $('body').width();
 
 	if ( browserWidth > 768 ) {

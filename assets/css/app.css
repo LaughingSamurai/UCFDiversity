@@ -1633,6 +1633,10 @@ nav.menu {
       max-width: 75%;
     }
 
+    .timeline-container .slide .year-content .inner {
+      max-width: none;
+    }
+
       #page-content .timeline-container .slide h3 {
         font-family: "futura-pt-condensed-n8", "futura-pt-condensed",sans-serif;
         background-color: #FFC411;

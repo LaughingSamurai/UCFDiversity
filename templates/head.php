@@ -22,8 +22,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <![endif]-->
 
+   <!-- Typekit -->
   <script src="//use.typekit.net/rwi5ttq.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
+
+  <!-- Slick -->
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/slick.css" />
 
   <?php wp_head(); ?>
 
