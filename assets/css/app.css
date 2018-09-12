@@ -1572,6 +1572,99 @@ nav.menu {
 
 
 /* ==========================================================================
+   Timeline
+   ========================================================================== */
+
+  .timeline-container {
+    border-bottom: 1px #FFC411 solid;
+    padding: 40px 0 20px 0;
+    position: relative;
+  }
+
+    .timeline-container .history-line {
+      background-color: #FFC411;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 68px;
+      left: 0;
+    }
+
+  .timeline-container .slide {
+
+  }
+
+    .timeline-container .previous-arrow,
+    .timeline-container .next-arrow {
+      background-color: #000000;
+      text-align: center;
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      height: 35px;
+      width: 35px;
+      z-index: 2;
+      top: 35%;
+    }
+
+      .timeline-container .previous-arrow {
+        left: -50px;
+      }
+
+        .timeline-container .previous-arrow img {
+          margin: 8px 0 0 -3px;
+          width: 12px;
+        }
+
+      .timeline-container .next-arrow {
+        right: -50px;
+      }
+
+        .timeline-container .next-arrow img {
+          margin: 8px -3px 0 0;
+          width: 12px;
+        }
+
+    .timeline-container .slick-arrow {
+        display: block !important;
+    }
+
+    .timeline-container .slide .inner {
+      max-width: 75%;
+    }
+
+      .timeline-container .slide h3 {
+        font-family: "futura-pt-condensed-n8", "futura-pt-condensed",sans-serif;
+        background-color: #FFC411;
+        display: inline-block;
+        font-size: 2.875em;
+        padding: 3px 3px 0 3px;
+        color: #000000;
+      }
+
+      .timeline-container .slide .year-content {
+        padding: 20px 0 0 0;
+      }
+
+        .timeline-container .slide .year-content p {
+          padding: 0 0 20px 0;
+          color: #000000;
+        }
+
+      .timeline-container .full-width .year-content {
+        max-width: 90%;
+        float: left;
+        width: 50%;
+      }
+
+      .timeline-container .full-width.slide .inner {
+        max-width: 85%;
+      }
+
+
+
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 

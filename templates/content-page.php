@@ -144,6 +144,8 @@
 
 	<?php
 
+	$i = 1;
+
 	// check if the repeater field has rows of data
 	if( have_rows('column_rows') ):
 
@@ -264,7 +266,108 @@
 
 		</div>
 
+		<?php if ( $i === 1 ) { ?>
+
+			<?php if ( get_field('display_timeline') === 'yes' ) { ?>
+
+				<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/slick.min.js"></script>
+
+				<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/slick.css" />
+
+				<script type="text/javascript">
+					
+					$(document).ready(function(){
+
+						// Initialize Timeline Slider
+						var slider = $('.timeline-content').slick({
+				        	infinite: true,
+				        	slidesToShow: 1,
+							slidesToScroll: 1,
+							draggable: false,
+				        	prevArrow: '<div class="arrow previous-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/prev.svg" alt="Previous Slide" /></div>',
+				        	nextArrow: '<div class="arrow next-arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next.svg" alt="Next Slide" /></div>',
+							variableWidth: true
+				        });
+
+						// Initial Responsive for Timeline Slider
+				        var width = $('.timeline-container').width();
+				    	if ( width < 768 ) {
+							$('.slide, .quarter-width, .third-width, .half-width, .full-width').width(width);
+						} else {
+							$('.quarter-width').width(width/4);
+					    	$('.third-width').width(width/3);
+					    	$('.half-width').width(width/2);
+					    	$('.full-width').width(width);
+						}
+
+						// Resize Responsive for Timeline Slider
+				    	$(window).on('resize', function(e) {
+
+				    		var width = $('.timeline-container').width();
+				    		if ( width < 768 ) {
+				    			$('.slide, .quarter-width, .third-width, .half-width, .full-width').width(width);
+				    		} else {
+								$('.quarter-width').width(width/4);
+						    	$('.third-width').width(width/3);
+						    	$('.half-width').width(width/2);
+						    	$('.full-width').width(width);
+				    		}
+
+				    	});
+
+					});
+
+				</script>
+
+				<div class="timeline-container">
+
+					<div class="history-line"></div>
+
+					<div class="timeline-content">
+
+						<?php if( have_rows('timeline_slide') ): ?>
+						
+							<?php while ( have_rows('timeline_slide') ) : the_row(); ?>
+
+								<div class="slide <?php the_sub_field('timeline_display_width'); ?>">
+
+									<div class="inner">
+									
+										<h3 class="year"><?php the_sub_field('timeline_year'); ?></h3>
+
+										<div class="clear"></div>
+
+										<?php if( have_rows('timeline_content_columns') ): ?>
+						
+											<?php while ( have_rows('timeline_content_columns') ) : the_row(); ?>
+
+												<div class="year-content">
+													<p><?php the_sub_field('timeline_content'); ?></p>
+												</div>
+
+											<?php endwhile; ?>
+						
+										<?php else: endif; ?>
+
+									</div>
+
+								</div>
+
+							<?php endwhile; ?>
+						
+						<?php else: endif; ?>
+
+					</div>
+
+				</div>
+
+			<?php } ?>
+
+		<?php } ?>
+
 	<?php	
+
+		$i++;
 
 		endwhile;
 
