@@ -342,7 +342,9 @@
 											<?php while ( have_rows('timeline_content_columns') ) : the_row(); ?>
 
 												<div class="year-content">
-													<p><?php the_sub_field('timeline_content'); ?></p>
+													<div class="inner">
+														<?php the_sub_field('timeline_content'); ?>
+													</div>
 												</div>
 
 											<?php endwhile; ?>
