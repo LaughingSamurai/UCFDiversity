@@ -1840,6 +1840,15 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     width: 100%;
   }
 
+  #banner .container {
+    padding: 0;
+  }
+
+  .brand {
+    font-size: 2.000em;
+    max-width: 185px;
+  }
+
 }
 
 
