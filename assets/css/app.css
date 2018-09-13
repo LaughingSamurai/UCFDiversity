@@ -258,6 +258,18 @@ nav.menu {
         background-position: center;
       }
 
+    #social-navigation li.menu-instagram {
+      background-color: #000000;
+      margin: 0 0 0 4px;
+    }
+
+      #social-navigation li.menu-instagram a {
+        background: url('../img/instagram.png');
+        background-size: 18px 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
     #social-navigation li.menu-flickr {
       background-color: #f604ff;
       margin: 0 0 0 5px;
