@@ -154,13 +154,11 @@
 
 	?>		
 
-		<div class="column-rows">
+		<div class="column-rows row">
 
 			<?php if ( get_sub_field('column_full_row') != NULL ) { ?>
 
-				<p><?php the_sub_field('column_full_row'); ?></p>
-
-				<div class="clear"></div>
+				<?php the_sub_field('column_full_row'); ?>
 
 			<?php } ?>
 						
@@ -168,7 +166,7 @@
 
 				<div class="columned-text">
 					
-					<p><?php the_sub_field('column_row_text_left'); ?></p>
+					<?php the_sub_field('column_row_text_left'); ?>
 
 				</div>
 
@@ -214,7 +212,7 @@
 
 				<div class="columned-text">
 					
-					<p><?php the_sub_field('column_row_text_right'); ?></p>
+					<?php the_sub_field('column_row_text_right'); ?>
 
 				</div>
 
@@ -324,15 +322,106 @@
 
 		endwhile;
 
-	else :
-
-		// no rows found
-
 	endif;
 
 	?>
 
+	<?php if ( get_field('display_logos') === 'yes' ) { ?>
 
+		<div class="logo-container">
+
+			<?php if( have_rows('logos') ): ?>
+
+				<ul>
+				
+					<?php while ( have_rows('logos') ) : the_row(); ?>
+
+						<li>
+							<a href="<?php the_sub_field('logo_link'); ?>" target="_blank">
+								<img src="<?php the_sub_field('logo_image'); ?>" alt="<?php the_sub_field('logo_name'); ?>" />
+							</a>
+						</li>
+
+					<?php endwhile; ?>
+
+				</ul>
+				
+			<?php endif; ?>
+
+		</div>
+
+	<?php } ?>
+
+	<?php if ( get_field('display_highlights_section') === 'yes' ) { ?>
+
+		<div class="highlights-container">
+
+			<div class="column-rows row">
+						
+				<div class="col-lg-8 col-md-8 col-sm-12">
+
+					<?php if( have_rows('highlights') ): ?>
+
+						<ul>
+						
+							<?php while ( have_rows('highlights') ) : the_row(); ?>
+
+								<li>
+									<?php if ( get_sub_field('highlight_image') ): ?>
+										<div class="highlight-image">
+											<img src="<?php the_sub_field('highlight_image'); ?>" alt="<?php the_sub_field('highlight_title'); ?>" />
+										</div>
+									<?php endif; ?>
+									<div class="highlight-content">
+										<span><?php the_sub_field('highlight_subtitle'); ?></span>
+										<h3>
+											<a href="<?php the_sub_field('highlight_link'); ?>" target="_blank"><?php the_sub_field('highlight_title'); ?></a>
+										</h3>
+										<p><?php the_sub_field('highlight_excerpt'); ?></p>
+									</div>
+								</li>
+
+							<?php endwhile; ?>
+
+						</ul>
+						
+					<?php endif; ?>
+
+				</div>
+
+				<div class="col-lg-4 col-md-4 col-sm-12">
+
+					<?php if ( get_field('highlights_sidebar') ): ?>
+
+						<div class="highlights-sidebar">
+
+							<div class="content">
+								
+								<?php the_field('highlights_sidebar'); ?>
+
+							</div>
+
+							<?php 
+									$link = get_field('hightlights_sidebar_learn_more_link');
+									if( $link ): 
+									    $link_url = $link['url'];
+									    $link_title = $link['title'];
+									    $link_target = $link['target'] ? $link['target'] : '_self';
+								?>
+									<a href="<?php echo esc_url( $link_url ); ?>" class="button" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<?php endif; ?>
+
+						</div>
+
+					<?php endif; ?>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<?php } ?>
 
 	<div class="clear"></div>
 
