@@ -154,7 +154,7 @@
 
 	?>		
 
-		<div class="column-rows row">
+		<div class="column-rows">
 
 			<?php if ( get_sub_field('column_full_row') != NULL ) { ?>
 
