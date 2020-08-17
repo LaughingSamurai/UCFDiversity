@@ -17,9 +17,6 @@
 	</div>
 </footer>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/bootstrap.min.js"></script>
-
 <?php if ( get_field('social_buttons') == 'share' ) { ?>
 
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/rrssb.css" />
